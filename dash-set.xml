@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+
+    <description>DaSH v5 human-powered airplane</description>
+    
+    <aircraft-version>20140905</aircraft-version>
+    
+    <status>development</status>
+    
+    <author>Marshall Gusman</author>
+    
+    <flight-model>jsb</flight-model>
+    
+    <aero>dash-fdm</aero>
+    
+    <startup>
+      <!-- <splash-texture>Images/dash-3view.png</splash-texture> -->
+      <splash-texture>Images/DashBoot_logo_Mod.png</splash-texture>
+      <splash-title>This machine powered by homo sapiens</splash-title>
+    </startup>
+
+    <model>
+      <path>Aircraft/dash/Models/dash-model.xml</path>
+    </model>
+
+<!--
+      <path>Aircraft/ASK13/Models/ask13.xml</path>
+<model><path></path></model>
+Where to find the model. Could be an .ac file (plain model format) or .xml if you want to have extras like animations etc.
+
+<sound><path></path></sound>
+The path to your aircraft's sound file, do not include if you don't have one. The pitch and volume of the sound is controlled by the xml file and throttle position. If for example you find a nice wav file of the jet engine you're using, you can fix it up with your favorite sound editor so it loops nicely and include that into your model (I've noticed a few models where it can get quite annoying when the loop length is so small you can really notice it) so make it smooth.
+
+For additional information, you'll want to check out $FG ROOT/Docs/README.xmlsound
+
+<panel><path></path></panel>
+Where to find the (2D) panel. We prefer 3D cockpits, which are linked in the model .xml file.
+
+<autopilot><path></path></autopilot>
+Where to find the autopilot system.
+
+More info here: http://wiki.flightgear.org/XML#3._Data
+-->
+
+ </sim>
+</PropertyList>

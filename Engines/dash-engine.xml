@@ -1,4 +1,8 @@
 <?xml version="1.0"?> 
+
+<!-- DaSH Human-Powered Airplane    -->
+<!-- Copyright 2014 Marshall Gusman -->
+
 <electric_engine name="legs">
  <power unit="WATTS"> 600 </power>
 </electric_engine>

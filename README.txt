@@ -12,5 +12,7 @@ More info on the DaSH project: http://dashpa.blogspot.com/
 
 Feedback and contributions to the model are welcome (Does it work for you? What needs cleanup? Can you animate wing bending as function of g-loading or rolling moment?)
 
+All code is from scratch, but the AC file is courtesy of SunLightEagle model for CRRC sim.
+
 Keep it low and slow,
 -Marshall Gusman

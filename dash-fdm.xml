@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 
+<!-- DaSH Human-Powered Airplane    -->
+<!-- Copyright 2014 Marshall Gusman -->
+
 <fdm_config name="dash-fdm" version="2.0" release="ALPHA"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">

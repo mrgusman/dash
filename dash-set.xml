@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 
+<!-- DaSH Human-Powered Airplane    -->
+<!-- Copyright 2014 Marshall Gusman -->
+
 <PropertyList>
   <sim>
 
@@ -16,9 +19,8 @@
     <aero>dash-fdm</aero>
     
     <startup>
-      <!-- <splash-texture>Images/dash-3view.png</splash-texture> -->
-      <splash-texture>Images/DashBoot_logo_Mod.png</splash-texture>
-      <splash-title>This machine powered by homo sapiens</splash-title>
+      <splash-texture>Images/dash-3view-noalpha.png</splash-texture>
+      <!-- <splash-title>This machine powered by homo sapiens</splash-title> -->
     </startup>
 
     <model>
@@ -26,7 +28,6 @@
     </model>
 
 <!--
-      <path>Aircraft/ASK13/Models/ask13.xml</path>
 <model><path></path></model>
 Where to find the model. Could be an .ac file (plain model format) or .xml if you want to have extras like animations etc.
 

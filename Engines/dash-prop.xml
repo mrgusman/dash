@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 
+<!-- DaSH Human-Powered Airplane    -->
+<!-- Copyright 2014 Marshall Gusman -->
+
 <propeller name="prop">
   <ixx unit="KG*M2"> 0.8 </ixx>
   <diameter unit="IN"> 144.0 </diameter>

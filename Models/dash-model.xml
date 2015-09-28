@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<!-- DaSH Human-Powered Airplane    -->
+<!-- Copyright 2014 Marshall Gusman -->
+
+<PropertyList>
+
+<!-- AC file is courtesy of SunLightEagle model for CRRC sim -->
+ <path>Aircraft/dash/Models/SLE_21b.ac</path>
+ <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+   <scale>10</scale>
+   <pitch-deg>0.0</pitch-deg>
+ </offsets>
+
+ <animation>
+   <object-name>Propeller</object-name>
+   <type>spin</type>
+   <property>engines/engine/rpm</property>
+   <factor>-1</factor>
+   <center>
+    <x-m> 2.285</x-m>
+    <y-m> 0    </y-m>
+    <z-m> 0.692</z-m>
+   </center>
+   <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+  	<type>rotate</type>
+  	<object-name>Elevator</object-name>
+  	<property>/controls/flight/elevator</property>
+  	<min-deg>-20</min-deg>
+  	<max-deg>20</max-deg>
+  	<factor>-20</factor>
+  	<center>
+  		<x-m>4.95</x-m>
+  		<y-m>0.00</y-m>
+  		<z-m>1.00</z-m>
+  	</center>
+  	<axis>
+  		<x>0</x>
+  		<y>-1</y>
+  		<z>0</z>
+  	</axis>
+  </animation>
+  
+  <animation>
+  	<type>rotate</type>
+  	<object-name>Rudder</object-name>
+  	<property>/controls/flight/aileron</property>
+  	<min-deg>-20</min-deg>
+  	<max-deg>20</max-deg>
+  	<factor>20</factor>
+  	<center>
+  		<x-m>5.66</x-m>
+  		<y-m>0.00</y-m>
+  		<z-m>1.00</z-m>
+  	</center>
+  	<axis>
+  		<x>0</x>
+  		<y>0</y>
+  		<z>1</z>
+  	</axis>
+  </animation>
+ </PropertyList>

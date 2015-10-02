@@ -24,7 +24,7 @@
     </startup>
 
     <model>
-      <path>Aircraft/dash/Models/dash-model.xml</path>
+      <path>Aircraft/DaSH/Models/dash-model.xml</path>
     </model>
 
 <!--

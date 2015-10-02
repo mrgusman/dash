@@ -6,7 +6,7 @@
 <PropertyList>
 
 <!-- AC file is courtesy of SunLightEagle model for CRRC sim -->
- <path>Aircraft/dash/Models/SLE_21b.ac</path>
+ <path>Aircraft/DaSH/Models/SLE_21b.ac</path>
  <offsets>
    <x-m>0</x-m>
    <y-m>0</y-m>

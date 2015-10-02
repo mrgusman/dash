@@ -21,9 +21,9 @@
    <property>engines/engine/rpm</property>
    <factor>-1</factor>
    <center>
-    <x-m> 2.285</x-m>
+    <x-m> -1.806</x-m>
     <y-m> 0    </y-m>
-    <z-m> 0.692</z-m>
+    <z-m> 0.734</z-m>
    </center>
    <axis>
     <x>1</x>

@@ -15,7 +15,14 @@
    <pitch-deg>0.0</pitch-deg>
  </offsets>
 
- <animation>
+  <params>
+        <gear>
+            <front-rollspeed-ms>engines/engine[3]/n1</front-rollspeed-ms>
+            <back-rollspeed-ms>engines/engine[3]/n2</back-rollspeed-ms>
+        </gear>
+  </params>
+
+  <animation>
    <object-name>Propeller</object-name>
    <type>spin</type>
    <property>engines/engine/rpm</property>
@@ -54,7 +61,41 @@
   		<z>0</z>
   	</axis>
   </animation>
-  
+
+  <animation>
+        <type>spin</type>
+        <object-name>FrontWheel</object-name>
+        <property alias="/params/gear/front-rollspeed-ms"/>
+        <factor>13</factor>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-0.72608</x-m>
+            <y-m>0.00115</y-m>
+            <z-m>-0.88244</z-m>
+        </center>
+  </animation>
+
+  <animation>
+        <type>spin</type>
+        <object-name>BackWheel</object-name>
+        <property alias="/params/gear/back-rollspeed-ms"/>
+        <factor>13</factor>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0.04753</x-m>
+            <y-m>-0.00008</y-m>
+            <z-m>-0.82061</z-m>
+        </center>
+  </animation>
+
   <animation>
   	<type>rotate</type>
   	<object-name>RudderRibs</object-name>

@@ -92,7 +92,7 @@
 
  <ground_reactions>
 
-  <contact type="BOGEY" name="MAIN">
+ <contact type="BOGEY" name="MAIN">
     <location unit="M">
       <x>   1.157</x>
       <y>   0.00 </y>
@@ -128,7 +128,7 @@
     <location unit="M">
      <x>   0.50 </x>
      <y> -16.65 </y>
-     <z>   3.83 </z>
+     <z>   0.80 </z>
    </location>
    <static_friction>  0.20 </static_friction>
    <dynamic_friction> 0.20 </dynamic_friction>
@@ -140,7 +140,7 @@
     <location unit="M">
      <x>   0.50 </x>
      <y>  16.65 </y>
-     <z>   3.83 </z>
+     <z>   0.80 </z>
    </location>
    <static_friction>  0.20 </static_friction>
    <dynamic_friction> 0.20 </dynamic_friction>

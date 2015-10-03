@@ -15,15 +15,22 @@
    <pitch-deg>0.0</pitch-deg>
  </offsets>
 
- <animation>
+  <params>
+        <gear>
+            <front-rollspeed-ms>engines/engine[3]/n1</front-rollspeed-ms>
+            <back-rollspeed-ms>engines/engine[3]/n2</back-rollspeed-ms>
+        </gear>
+  </params>
+
+  <animation>
    <object-name>Propeller</object-name>
    <type>spin</type>
    <property>engines/engine/rpm</property>
    <factor>-1</factor>
    <center>
-    <x-m> 2.285</x-m>
+    <x-m> -1.806</x-m>
     <y-m> 0    </y-m>
-    <z-m> 0.692</z-m>
+    <z-m> 0.734</z-m>
    </center>
    <axis>
     <x>1</x>
@@ -34,15 +41,19 @@
 
   <animation>
   	<type>rotate</type>
-  	<object-name>Elevator</object-name>
+  	<object-name>ElevatorRibs</object-name>
+        <object-name>ElevatorCovering</object-name>
+        <object-name>ElevatorMain</object-name>
+        <object-name>ElevatorRod</object-name>
+        <object-name>ElevatorEdges</object-name>
   	<property>/controls/flight/elevator</property>
   	<min-deg>-20</min-deg>
   	<max-deg>20</max-deg>
   	<factor>-20</factor>
   	<center>
   		<x-m>4.95</x-m>
-  		<y-m>0.00</y-m>
-  		<z-m>1.00</z-m>
+  		<y-m>0.03</y-m>
+  		<z-m>0.92</z-m>
   	</center>
   	<axis>
   		<x>0</x>
@@ -50,18 +61,56 @@
   		<z>0</z>
   	</axis>
   </animation>
-  
+
+  <animation>
+        <type>spin</type>
+        <object-name>FrontWheel</object-name>
+        <property alias="/params/gear/front-rollspeed-ms"/>
+        <factor>13</factor>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-0.72608</x-m>
+            <y-m>0.00115</y-m>
+            <z-m>-0.88244</z-m>
+        </center>
+  </animation>
+
+  <animation>
+        <type>spin</type>
+        <object-name>BackWheel</object-name>
+        <property alias="/params/gear/back-rollspeed-ms"/>
+        <factor>13</factor>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0.04753</x-m>
+            <y-m>-0.00008</y-m>
+            <z-m>-0.82061</z-m>
+        </center>
+  </animation>
+
   <animation>
   	<type>rotate</type>
-  	<object-name>Rudder</object-name>
+  	<object-name>RudderRibs</object-name>
+  	<object-name>RudderCovering</object-name>
+        <object-name>RudderMain</object-name>
+        <object-name>RudderRod</object-name>
+        <object-name>RudderEdges</object-name>
   	<property>/controls/flight/aileron</property>
   	<min-deg>-20</min-deg>
   	<max-deg>20</max-deg>
   	<factor>20</factor>
   	<center>
-  		<x-m>5.66</x-m>
-  		<y-m>0.00</y-m>
-  		<z-m>1.00</z-m>
+  		<x-m>5.660</x-m>
+  		<y-m>0.168</y-m>
+  		<z-m>0.939</z-m>
   	</center>
   	<axis>
   		<x>0</x>

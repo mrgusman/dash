@@ -46,4 +46,20 @@ More info here: http://wiki.flightgear.org/XML#3._Data
 -->
 
  </sim>
+
+    <engines>
+        <!-- Following properties are part of a static list of properties
+             that FlightGear transmits during multiplay. Because the number
+             of properties in /sim/multiplay/generic/ is quite limited and
+             the properties in /engines/ are unused, we can use them instead
+             to get FlightGear to transmit all the required properties.
+        -->
+
+        <!-- Rotation of tires -->
+        <engine n="3">
+            <n1 alias="/gear/gear[0]/rollspeed-ms"/>
+            <n2 alias="/gear/gear[1]/rollspeed-ms"/>
+        </engine>
+    </engines>
+
 </PropertyList>

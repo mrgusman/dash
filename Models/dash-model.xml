@@ -25,12 +25,42 @@
   <!--  Specularity fix -->
   <animation>
         <type>material</type>
+        <object-name>FrontWheel</object-name>
+        <object-name>FrontWheelStrut</object-name>
         <object-name>BackWheel</object-name>
         <object-name>BackWheelStrut</object-name>
-        <object-name>Boom</object-name>
+        <!--object-name>Boom</object-name>
         <object-name>Cage1</object-name>
         <object-name>Cage2</object-name>
-        <object-name>LeftWingEdge</object-name>
+        <object-name>Cage3</object-name>
+        <object-name>Cage4</object-name>
+        <object-name>FuslageFrame</object-name>
+        <object-name>FuslageSupport</object-name>
+        <object-name>WingBaseTube</object-name>
+        <object-name>RudderRod</object-name>
+        <object-name>ElevatorRod</object-name>
+        <object-name>LeftWingRod</object-name>
+        <object-name>RightWingRod</object-name-->
+        <object-name>WingBaseLeftCovering</object-name>
+        <object-name>WingBaseRightCovering</object-name>
+        <object-name>LeftBaseRib</object-name>
+        <object-name>RightBaseRib</object-name>
+        <object-name>RudderRibs</object-name>
+        <object-name>ElevatorRibs</object-name>
+        <object-name>LeftWingRibs</object-name>
+        <object-name>RightWingRibs</object-name>
+        <object-name>RudderMain</object-name>
+        <object-name>ElevatorMain</object-name>
+        <object-name>LeftWingMain</object-name>
+        <object-name>RightWingMain</object-name>
+        <object-name>RudderEdges</object-name>
+        <object-name>ElevatorEdges</object-name>
+        <object-name>LeftWingEdges</object-name>
+        <object-name>RightWingEdges</object-name>
+        <object-name>FuslageOverlay</object-name>
+        <object-name>FuslageCoveringTop</object-name>
+        <object-name>FuslageCoveringBottom</object-name>
+        <object-name>FuslageCoveringBack</object-name>
         <shininess>128</shininess>
         <specular>
             <r>1</r>
@@ -52,6 +82,8 @@
         <object-name>RightWingCovering</object-name>
         <object-name>ElevatorCovering</object-name>
         <object-name>RudderCovering</object-name>
+        <object-name>WingBaseLeftCovering</object-name>
+        <object-name>WingBaseRightCovering</object-name>
     </effect>
 
     <!-- interior effects
@@ -78,6 +110,8 @@
         <object-name>RightWingCovering</object-name>
         <object-name>ElevatorCovering</object-name>
         <object-name>RudderCovering</object-name>
+        <object-name>WingBaseLeftCovering</object-name>
+        <object-name>WingBaseRightCovering</object-name>
     </effect>
 
     <effect>

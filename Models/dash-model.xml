@@ -54,6 +54,7 @@
         <object-name>LeftWingMain</object-name>
         <object-name>RightWingMain</object-name>
         <object-name>RudderEdges</object-name>
+		<object-name>RudderBottomEdge</object-name>
         <object-name>ElevatorEdges</object-name>
         <object-name>LeftWingEdges</object-name>
         <object-name>RightWingEdges</object-name>
@@ -73,6 +74,17 @@
             <b>1</b>
         </ambient>
     </animation>
+
+	<effect>
+    <inherits-from>Aircraft/DaSH/Models/Effects/effectsMetal</inherits-from>
+        <object-name>FuselageCoveringBack</object-name>
+		<object-name>FuselageCoveringTop</object-name>
+		<object-name>FuselageCoveringBottom</object-name>
+		<object-name>FuselageOverlay</object-name>
+		<object-name>RudderBottomEdge</object-name>
+		<object-name>PropHub</object-name>
+		<object-name>Propeller</object-name>
+    </effect>
 
     <!-- Transparent Surfaces for Rembrandt rendering -->
     <effect>
@@ -104,7 +116,7 @@
     -->
 
     <effect>
-        <inherits-from>Effects/glass</inherits-from>
+        <inherits-from>Aircraft/DaSH/Models/Effects/glass</inherits-from>
         <object-name>FuselageCovering</object-name>
         <object-name>LeftWingCovering</object-name>
         <object-name>RightWingCovering</object-name>

@@ -92,27 +92,11 @@
 
  <ground_reactions>
 
- <contact type="BOGEY" name="MAIN">
-    <location unit="M">
-      <x>   1.157</x>
-      <y>   0.00 </y>
-      <z>   0.00 </z>
-    </location>
-    <static_friction>  0.800 </static_friction>
-    <dynamic_friction> 0.500 </dynamic_friction>
-    <rolling_friction> 0.020 </rolling_friction>
-    <spring_coeff  unit="N/M">      5000.00 </spring_coeff>
-    <damping_coeff unit="N/M/SEC">   500.00 </damping_coeff>
-    <max_steer unit="DEG">0</max_steer>
-    <brake_group>NONE</brake_group>
-    <retractable>0</retractable>
-  </contact>
-
   <contact type="BOGEY" name="NOSE">
     <location unit="M">
-     <x>   0.046</x>
-     <y>   0.00 </y>
-     <z>   0.00 </z>
+     <x> -0.72 </x>
+     <y>  0.00 </y>
+     <z>  0.05 </z>
    </location>
    <static_friction>  0.800 </static_friction>
    <dynamic_friction> 0.500 </dynamic_friction>
@@ -122,6 +106,22 @@
    <max_steer unit="DEG">0</max_steer>
    <brake_group>NONE</brake_group>
    <retractable>0</retractable>
+  </contact>
+  
+  <contact type="BOGEY" name="MAIN">
+    <location unit="M">
+      <x>  1.05 </x>
+      <y>  0.00 </y>
+      <z> -0.08 </z>
+    </location>
+    <static_friction>  0.800 </static_friction>
+    <dynamic_friction> 0.500 </dynamic_friction>
+    <rolling_friction> 0.020 </rolling_friction>
+    <spring_coeff  unit="N/M">      5000.00 </spring_coeff>
+    <damping_coeff unit="N/M/SEC">   500.00 </damping_coeff>
+    <max_steer unit="DEG">0</max_steer>
+    <brake_group>NONE</brake_group>
+    <retractable>0</retractable>
   </contact>
 
   <contact type="STRUCTURE" name="LEFT_WING">

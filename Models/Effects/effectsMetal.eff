@@ -1,8 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
   <name>Aircraft/DaSH/Models/Effects/effectsMetal</name>
   <inherits-from>Effects/model-combined-deferred</inherits-from>
   <parameters>
-  
      <normalmap-enabled type="int">0</normalmap-enabled>
      <normalmap-dds type="int">0</normalmap-dds>
      <texture n="2">
@@ -12,11 +12,13 @@
          <wrap-t>clamp</wrap-t>
          <internal-format>normalized</internal-format>
      </texture>   
-     
      <reflection-enabled type="int">1</reflection-enabled>
      <reflect-map-enabled type="int">1</reflect-map-enabled>
      <reflection-correction type="float">0.1</reflection-correction>
      <reflection-dynamic type="int">1</reflection-dynamic>
+     <reflection-fresnel type="float">0.1</reflection-fresnel>
+     <reflection-rainbow type="float">0.01</reflection-rainbow>
+     <reflection-noise type="float">0.2</reflection-noise>
      <texture n="4">
         <image>Aircraft/DaSH/Models/Effects/dashReflectionMap.png</image>
         <filter>linear-mipmap-linear</filter>
@@ -24,7 +26,6 @@
         <wrap-t>clamp</wrap-t>
         <internal-format>normalized</internal-format>
      </texture>
-     
      <texture n="5">
         <type>cubemap</type>
         <images>
@@ -36,9 +37,6 @@
             <negative-z>Aircraft/Generic/Effects/CubeMaps/fgfs-sky/5.png</negative-z>
         </images>
     </texture>
-    <reflection-fresnel type="float">0.1</reflection-fresnel>
-    <reflection-rainbow type="float">0.01</reflection-rainbow>
-    <reflection-noise type="float">0.2</reflection-noise>
     <ambient-correction type="float">0.15</ambient-correction>
     <dirt-enabled type="int">1</dirt-enabled>
     <dirt-color type="vec3d">1.0 1.0 1.0</dirt-color>

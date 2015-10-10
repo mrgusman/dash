@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+
+<!-- C172p-detailed
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+-->
+
+<PropertyList>
+
+    <name>aircraft-dialog</name>
+    <layout>vbox</layout>
+    <resizable>false</resizable>
+    <modal>false</modal>
+    <draggable>true</draggable>
+
+    <nasal>
+        <open>
+            # Engine power
+            var p = getprop("fdm/jsbsim/power-curve");
+            setprop("sim/model/dash/engine_flag_0", 0);
+            setprop("sim/model/dash/engine_flag_1", 0);
+            setprop("sim/model/dash/engine_flag_2", 0);
+            setprop("sim/model/dash/engine_flag_3", 0);
+            setprop("sim/model/dash/engine_flag_4", 0);
+            setprop("sim/model/dash/engine_flag_" ~ p, 1);
+        </open>
+    </nasal>
+
+    <group>
+        <layout>hbox</layout>
+
+        <empty><stretch>true</stretch></empty>
+        <text>
+            <label>Aircraft Options</label>
+        </text>
+        <empty><stretch>true</stretch></empty>
+
+        <button>
+            <legend/>
+            <key>Esc</key>
+            <pref-width>16</pref-width>
+            <pref-height>16</pref-height>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+
+    <hrule/>
+
+    <group>
+        <layout>vbox</layout>
+        <padding>6</padding>
+
+        <group>
+            <layout>vbox</layout>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Show shadow</label>
+                <property>/sim/rendering/shadow-volume</property>
+                <live>true</live>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/sim/rendering/shadow-volume</property>
+                </binding>
+            </checkbox>
+
+            <!--checkbox>
+                <halign>left</halign>
+                <label>Human models</label>
+                <property>/sim/model/occupants</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox-->
+        </group>
+
+        <hrule/>
+
+        <group>
+            <layout>vbox</layout>
+
+            <text>
+                <label>Engine power options</label>
+                <halign>center</halign>
+            </text>
+
+            <group>
+                <layout>hbox</layout>
+
+                <radio>
+                    <halign>left</halign>
+                    <label>Healthy Human</label>
+                    <property>sim/model/dash/engine_flag_0</property>
+                    <live>true</live>
+                    <enable>
+                        <not>
+                            <property>/sim/freeze/replay-state</property>
+                        </not>
+                    </enable>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                    <binding>
+                        <command>nasal</command>
+                        <script>
+                            setprop("fdm/jsbsim/power-curve", 0);
+                            gui.popupTip("750 Peak, 225 Sustained", 15);
+                            setprop("fdm/jsbsim/pedal-power", 0);
+                            <!--dash.powerCurve(1);-->
+                            setprop("sim/model/dash/engine_flag_0", 1);
+                            setprop("sim/model/dash/engine_flag_1", 0);
+                            setprop("sim/model/dash/engine_flag_2", 0);
+                            setprop("sim/model/dash/engine_flag_3", 0);
+                            setprop("sim/model/dash/engine_flag_4", 0);
+                        </script>
+                    </binding>
+                </radio>
+
+                <radio>
+                    <halign>left</halign>
+                    <label>Athlete</label>
+                    <property>sim/model/dash/engine_flag_1</property>
+                    <live>true</live>
+                    <enable>
+                        <not>
+                            <property>/sim/freeze/replay-state</property>
+                        </not>
+                    </enable>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                    <binding>
+                        <command>nasal</command>
+                        <script>
+                            setprop("fdm/jsbsim/power-curve", 1);
+                            gui.popupTip("1000 Peak, 400 Sustained", 15);
+                            setprop("fdm/jsbsim/pedal-power", 0);
+                            <!--dash.powerCurve(1);-->
+                            setprop("sim/model/dash/engine_flag_0", 0);
+                            setprop("sim/model/dash/engine_flag_1", 1);
+                            setprop("sim/model/dash/engine_flag_2", 0);
+                            setprop("sim/model/dash/engine_flag_3", 0);
+                            setprop("sim/model/dash/engine_flag_4", 0);
+                        </script>
+                    </binding>
+                </radio>
+
+                <radio>
+                    <halign>left</halign>
+                    <label>Cyclists</label>
+                    <property>sim/model/dash/engine_flag_2</property>
+                    <live>true</live>
+                    <enable>
+                        <not>
+                            <property>/sim/freeze/replay-state</property>
+                        </not>
+                    </enable>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                    <binding>
+                        <command>nasal</command>
+                        <script>
+                            setprop("fdm/jsbsim/power-curve", 2);
+                            gui.popupTip("1100 Peak, 450 Sustained", 15);
+                            setprop("fdm/jsbsim/pedal-power", 0);
+                            <!--dash.powerCurve(1);-->
+                            setprop("sim/model/dash/engine_flag_0", 0);
+                            setprop("sim/model/dash/engine_flag_1", 0);
+                            setprop("sim/model/dash/engine_flag_2", 1);
+                            setprop("sim/model/dash/engine_flag_3", 0);
+                            setprop("sim/model/dash/engine_flag_4", 0);
+                        </script>
+                    </binding>
+                </radio>
+
+                <radio>
+                    <halign>left</halign>
+                    <label>Inhuman</label>
+                    <property>sim/model/dash/engine_flag_3</property>
+                    <live>true</live>
+                    <enable>
+                        <not>
+                            <property>/sim/freeze/replay-state</property>
+                        </not>
+                    </enable>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                    <binding>
+                        <command>nasal</command>
+                        <script>
+                            setprop("fdm/jsbsim/power-curve", 3);
+                            gui.popupTip("1000 Peak, 1000 Sustained", 15);
+                            setprop("fdm/jsbsim/pedal-power", 0);
+                            <!--dash.powerCurve(1);-->
+                            setprop("sim/model/dash/engine_flag_0", 0);
+                            setprop("sim/model/dash/engine_flag_1", 0);
+                            setprop("sim/model/dash/engine_flag_2", 0);
+                            setprop("sim/model/dash/engine_flag_3", 1);
+                            setprop("sim/model/dash/engine_flag_4", 0);
+                        </script>
+                    </binding>
+                </radio>
+
+                <radio>
+                    <halign>left</halign>
+                    <label>Pedal Power</label>
+                    <property>sim/model/dash/engine_flag_4</property>
+                    <live>true</live>
+                    <enable>
+                        <not>
+                            <property>/sim/freeze/replay-state</property>
+                        </not>
+                    </enable>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                    <binding>
+                        <command>nasal</command>
+                        <script>
+                            setprop("fdm/jsbsim/power-curve", 4);
+                            gui.popupTip("Tap the [Space Bar] to pedal", 15);
+                            setprop("fdm/jsbsim/pedal-power", 1);
+                            <!--dash.powerCurve(2);-->
+                            dash.pedal();
+                            setprop("sim/model/dash/engine_flag_0", 0);
+                            setprop("sim/model/dash/engine_flag_1", 0);
+                            setprop("sim/model/dash/engine_flag_2", 0);
+                            setprop("sim/model/dash/engine_flag_3", 0);
+                            setprop("sim/model/dash/engine_flag_4", 1);
+                        </script>
+                    </binding>
+                </radio>
+            </group>
+        </group>
+    </group>
+
+    <hrule/>
+
+    <group>
+        <layout>hbox</layout>
+        <default-padding>6</default-padding>
+
+        <empty><stretch>true</stretch></empty>
+
+        <button>
+            <legend>Close</legend>
+            <equal>true</equal>
+            <key>Esc</key>
+            <default>true</default>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+
+</PropertyList>

@@ -74,7 +74,7 @@ var global_system_loop = func{
     weather_effects_loop();
 }
 
-#var nasalInit = setlistener("/sim/signals/fdm-initialized", func{
-#    var dash_timer = maketimer(0.25, func{global_system_loop()});
-#   dash_timer.start();
-#});
+var nasalInit = setlistener("/sim/signals/fdm-initialized", func{
+    var dash_timer = maketimer(0.25, func{global_system_loop()});
+   dash_timer.start();
+});

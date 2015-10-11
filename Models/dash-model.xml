@@ -80,9 +80,10 @@
         </ambient>
     </animation>
 
+    <!-- exterior effects -->
     <!-- inherits model-combined-deferred -->
     <effect>
-        <inherits-from>Aircraft/DaSH/Models/Effects/effectsMetal</inherits-from>
+        <inherits-from>Aircraft/DaSH/Models/Effects/dash-exterior-solid</inherits-from>
         <object-name>FuselageCoveringBack</object-name>
         <object-name>FuselageCoveringTop</object-name>
         <object-name>FuselageCoveringBottom</object-name>
@@ -94,7 +95,7 @@
 
     <!-- inherits model-combined-transperant -->
     <effect>
-        <inherits-from>Aircraft/DaSH/Models/Effects/glass</inherits-from>
+        <inherits-from>Aircraft/DaSH/Models/Effects/dash-exterior-glass</inherits-from>
         <object-name>FuselageCovering</object-name>
         <object-name>LeftWingCovering</object-name>
         <object-name>RightWingCovering</object-name>
@@ -111,9 +112,13 @@
 
     <!-- interior effects -->
     <effect>
-        <inherits-from>Effects/dash-interior</inherits-from>
-        <object-name>InteriorGlass</object-name>
+        <inherits-from>Effects/dash-interior-solid</inherits-from>
         <object-name>InteriorCockpit</object-name>
+    </effect>
+
+    <effect>
+        <inherits-from>Effects/glass</inherits-from>
+        <object-name>InteriorGlass</object-name>
     </effect>
 
     <!--

@@ -59,8 +59,8 @@ More info here: http://wiki.flightgear.org/XML#3._Data
     
     <!-- Save some properties when the simulator is shut down -->
     <aircraft-data>
-        <path>fdm/jsbsim/power-curve</path>
-        <path>fdm/jsbsim/pedal-power</path>
+        <!--path>fdm/jsbsim/power-curve</path>
+        <path>fdm/jsbsim/pedal-power</path-->
         <path>/sim/rendering/shadow-volume</path>
         <!--path>/sim/model/occupants</path-->
     </aircraft-data>
@@ -87,6 +87,10 @@ More info here: http://wiki.flightgear.org/XML#3._Data
 
  </sim>
 
+    <input>
+        <keyboard include="dash-keyboard.xml"/>
+    </input>
+
     <engines>
         <!-- Following properties are part of a static list of properties
              that FlightGear transmits during multiplay. Because the number
@@ -111,9 +115,10 @@ More info here: http://wiki.flightgear.org/XML#3._Data
 
     <fdm>
         <jsbsim>
-            <pedal-power type="int">0</pedal-power>
-            <power-curve type="int">0</power-curve>
-            <elapsed-time type="int">0</elapsed-time>
+            <electric-power type="int">1</electric-power>
+            <power-curve type="int">7</power-curve>
+            <elapsed-time type="double">0.0</elapsed-time>
+			<curve-text type="string">Choose between 7 human power curves to power the DaSH aircraft. Or choose unlimited Electric Power. The Human Power Curves are taken from existing data compiled by NASA and from actual data points collected over time from various competitions and events. (See DaSH\Systems\dash-power-curves.xml and \DaSH\Images\humanpoweroutput.jpg for more information.)</curve-text>
         </jsbsim>
    </fdm>
 </PropertyList>

@@ -1,28 +1,6 @@
-var pedal = func {
-	#space = pedal
-        if (getprop("devices/status/keyboard/event/key") != 32  and getprop("/controls/engines/engine[0]/throttle") > 0){
-            setprop("/controls/engines/engine[0]/throttle", getprop("/controls/engines/engine[0]/throttle") - .01);
-        }
-	if (getprop("devices/status/keyboard/event/key") == 32 and !getprop("devices/status/keyboard/event/pressed")){
-            if (getprop("/controls/engines/engine[0]/throttle") < 1)
-	        setprop("/controls/engines/engine[0]/throttle", getprop("/controls/engines/engine[0]/throttle") + .01);
-            settimer(func {
-               setprop("devices/status/keyboard/event/key", 0);
-            }, .1);
-	}
-        if (getprop("fdm/jsbsim/pedal-power"))
-	    settimer( func { pedal() } , .1 );
-}
+var power_curve = func () {
 
-var powerCurve = func (v) {
-
-    if (v == 1) {
-        setprop("fdm/jsbsim/elapsed-time", 0);
-        v = 0;
-    } else
-        setprop("fdm/jsbsim/elapsed-time", getprop("fdm/jsbsim/elapsed-time") + 1);
-
-    gui.popupTip(getprop("fdm/jsbsim/elapsed-time"), 10);
+    setprop("fdm/jsbsim/elapsed-time", getprop("fdm/jsbsim/elapsed-time") + .25);
 
     if (getprop("fdm/jsbsim/elapsed-time") == 60) {
         gui.popupTip("Elapsed Time = 1 minute " ~ getprop("fdm/jsbsim/elapsed-time"), 10);
@@ -34,16 +12,28 @@ var powerCurve = func (v) {
         gui.popupTip("Elapsed Time = 5 minutes " ~ getprop("fdm/jsbsim/elapsed-time"), 10);
     }
 
-    if (v == 0)
-        settimer( func {powerCurve(0) } , 1 );
-}
+    if (getprop("fdm/jsbsim/power-curve") == 0)
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/healthy60m")/2378);
 
-var nasalInit = setlistener("/sim/signals/fdm-initialized", func{
-    #aircraft.data.add("fdm/jsbsim/pedal-power");
-    #aircraft.data.load();
-    if (getprop("fdm/jsbsim/pedal-power"))
-        pedal();
- });
+    if (getprop("fdm/jsbsim/power-curve") == 1)
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/athlete60m")/1000);
+
+    if (getprop("fdm/jsbsim/power-curve") == 2)
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/healthy500m")/750);
+
+    if (getprop("fdm/jsbsim/power-curve") == 3)
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/athlete1440m")/1000);
+
+	if (getprop("fdm/jsbsim/power-curve") == 4)
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/cyclist60m")/2378);
+
+    if (getprop("fdm/jsbsim/power-curve") == 5)
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/cyclist27500m")/2378);
+
+    if (getprop("fdm/jsbsim/power-curve") == 6)
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/cyclist27500mstep")/2378);
+
+}
 
 ############################################## rain
 var weather_effects_loop = func {
@@ -72,9 +62,14 @@ var weather_effects_loop = func {
 ############################################
 var global_system_loop = func{
     weather_effects_loop();
+    if (!getprop("fdm/jsbsim/electric-power")) 
+        power_curve();
 }
 
 var nasalInit = setlistener("/sim/signals/fdm-initialized", func{
+    #aircraft.data.add("fdm/jsbsim/pedal-power");
+    #aircraft.data.load();
     var dash_timer = maketimer(0.25, func{global_system_loop()});
-   dash_timer.start();
+    dash_timer.start();
 });
+

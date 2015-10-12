@@ -45,10 +45,13 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
         <fcs_function name="human-output/healthy60m">
             <function>
                 <product>
-                    <value>634.4224161371</value>
+                    <value>456.624944332</value>
                     <pow>
-                        <property>/fdm/jsbsim/elapsed-time</property>
-                        <value>-.1585397352</value>  
+                        <quotient>
+                            <property>/fdm/jsbsim/elapsed-time</property>
+                            <value>60</value>
+						</quotient>
+                        <value>-.1994919163</value>  
                     </pow>
                 </product>
             </function>
@@ -57,10 +60,13 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
         <fcs_function name="human-output/athlete60m">
             <function>
                 <product>
-                    <value>456.624944332</value>
+                    <value>634.4224161371</value>
                     <pow>
-                        <property>/fdm/jsbsim/elapsed-time</property>
-                        <value>-.1994919163</value>  
+                        <quotient>
+                            <property>/fdm/jsbsim/elapsed-time</property>
+                            <value>60</value>
+						</quotient>
+                        <value>-.1585397352</value> 
                     </pow>
                 </product>
             </function>
@@ -71,7 +77,10 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                 <product>
                     <value>467.7731940038</value>
                     <pow>
-                        <property>/fdm/jsbsim/elapsed-time</property>
+                        <quotient>
+                            <property>/fdm/jsbsim/elapsed-time</property>
+                            <value>60</value>
+						</quotient>
                         <value>-.2400079661</value>  
                     </pow>
                 </product>
@@ -82,10 +91,10 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
             <function>
                 <product>
                     <value>625.1504655025</value>
-                    <pow>
-                        <property>/fdm/jsbsim/elapsed-time</property>
-                        <value>-.127238721</value>  
-                    </pow>
+                        <quotient>
+                            <property>/fdm/jsbsim/elapsed-time</property>
+                            <value>60</value>
+						</quotient>
                 </product>
             </function>
         </fcs_function>
@@ -95,7 +104,10 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                 <product>
                     <value>1086.9080546686</value>
                     <pow>
-                        <property>/fdm/jsbsim/elapsed-time</property>
+                        <quotient>
+                            <property>/fdm/jsbsim/elapsed-time</property>
+                            <value>60</value>
+						</quotient>
                         <value>-.2714570552</value>  
                     </pow>
                 </product>
@@ -119,7 +131,10 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                 <product>
                     <value>1094.5382726448</value>
                     <pow>
-                        <property>/fdm/jsbsim/elapsed-time</property>
+                        <product>
+                            <property>/fdm/jsbsim/elapsed-time</property>
+                            <value>.016666666667</value>
+						</product>
                         <value>-.186084247</value>  
                     </pow>
                 </product>

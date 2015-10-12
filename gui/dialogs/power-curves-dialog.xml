@@ -32,6 +32,10 @@
             setprop("sim/model/dash/engine_flag_5", 0);
             setprop("sim/model/dash/engine_flag_6", 0);
             setprop("sim/model/dash/engine_flag_7", 0);
+            setprop("sim/model/dash/engine_flag_8", 0);
+            setprop("sim/model/dash/engine_flag_9", 0);
+            setprop("sim/model/dash/engine_flag_10", 0);
+            setprop("sim/model/dash/engine_flag_11", 0);
             setprop("sim/model/dash/engine_flag_" ~ p, 1);
         </open>
     </nasal>
@@ -64,94 +68,250 @@
 
         <group>
             <layout>hbox</layout>
-			<halign>center</halign>
-			<textbox>
-			    <name>editfield</name>
-				<halign>fill</halign>
-				<valign>fill</valign>
-				<stretch>true</stretch>
-				<pref-width>900</pref-width>
-				<pref-height>85</pref-height>
-				<padding>6</padding>
-				<editable>false</editable>
-				<wrap>true</wrap>
-				<property>fdm/jsbsim/curve-text</property>
-				<font>
-				<name>FIXED_8x13</name>
-				</font>
-            </textbox>
+                <halign>center</halign>
+                <textbox>
+                    <name>editfield</name>
+                    <halign>fill</halign>
+                    <valign>fill</valign>
+                   <stretch>true</stretch>
+                   <pref-width>900</pref-width>
+                   <pref-height>85</pref-height>
+                   <padding>6</padding>
+                   <editable>false</editable>
+                   <wrap>true</wrap>
+                   <property>fdm/jsbsim/dash/curve-text</property>
+                   <font>
+                       <name>FIXED_8x13</name>
+                   </font>
+               </textbox>
         </group>
 
-		<hrule/>
+        <hrule/>
 
         <group>
-                <layout>hbox</layout>
+            <layout>hbox</layout>
 
-                <radio>
-                    <halign>left</halign>
-                    <label>Healthy 60m</label>
-                    <property>sim/model/dash/engine_flag_0</property>
-                    <live>true</live>
-                    <enable>
-                        <not>
-                            <property>/sim/freeze/replay-state</property>
-                        </not>
-                    </enable>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                    <binding>
-                        <command>nasal</command>
-                        <script>
-                            setprop("fdm/jsbsim/power-curve", 0);
-                            gui.popupTip("750 Peak, 185/60m Sustained", 15);
-                            setprop("fdm/jsbsim/electric-power", 0);
-                            setprop("fdm/jsbsim/elapsed-time", 0);
-                            setprop("sim/model/dash/engine_flag_0", 1);
-                            setprop("sim/model/dash/engine_flag_1", 0);
-                            setprop("sim/model/dash/engine_flag_2", 0);
-                            setprop("sim/model/dash/engine_flag_3", 0);
-                            setprop("sim/model/dash/engine_flag_4", 0);
-                            setprop("sim/model/dash/engine_flag_5", 0);
-                            setprop("sim/model/dash/engine_flag_6", 0);
-                            setprop("sim/model/dash/engine_flag_7", 0);
-                        </script>
-                    </binding>
-                </radio>
+            <radio>
+                <halign>center</halign>
+                <label>215 watts</label>
+                <property>sim/model/dash/engine_flag_8</property>
+                <live>true</live>
+                <enable>
+                    <not>
+                        <property>/sim/freeze/replay-state</property>
+                    </not>
+                </enable>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        setprop("fdm/jsbsim/power-curve", 8);
+                        gui.popupTip("215 Watts Sustained", 15);
+                        setprop("fdm/jsbsim/electric-power", 0);
+                        setprop("fdm/jsbsim/elapsed-time", 0);
+                        setprop("sim/model/dash/engine_flag_0", 0);
+                        setprop("sim/model/dash/engine_flag_1", 0);
+                        setprop("sim/model/dash/engine_flag_2", 0);
+                        setprop("sim/model/dash/engine_flag_3", 0);
+                        setprop("sim/model/dash/engine_flag_4", 0);
+                        setprop("sim/model/dash/engine_flag_5", 0);
+                        setprop("sim/model/dash/engine_flag_6", 0);
+                        setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 1);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 0);
+                    </script>
+                </binding>
+            </radio>
 
-                <radio>
-                    <halign>left</halign>
-                    <label>Athlete 60m</label>
-                    <property>sim/model/dash/engine_flag_1</property>
-                    <live>true</live>
-                    <enable>
-                        <not>
-                            <property>/sim/freeze/replay-state</property>
-                        </not>
-                    </enable>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                    <binding>
-                        <command>nasal</command>
-                        <script>
-                            setprop("fdm/jsbsim/power-curve", 1);
-                            gui.popupTip("1000 Peak, 360/60m Sustained", 15);
-                            setprop("fdm/jsbsim/electric-power", 0);
-                            setprop("fdm/jsbsim/elapsed-time", 0);
-                            setprop("sim/model/dash/engine_flag_0", 0);
-                            setprop("sim/model/dash/engine_flag_1", 1);
-                            setprop("sim/model/dash/engine_flag_2", 0);
-                            setprop("sim/model/dash/engine_flag_3", 0);
-                            setprop("sim/model/dash/engine_flag_4", 0);
-                            setprop("sim/model/dash/engine_flag_5", 0);
-                            setprop("sim/model/dash/engine_flag_6", 0);
-                            setprop("sim/model/dash/engine_flag_7", 0);
-                        </script>
-                    </binding>
-                </radio>
+            <radio>
+                <halign>center</halign>
+                <label>325 watts</label>
+                <property>sim/model/dash/engine_flag_9</property>
+                <live>true</live>
+                <enable>
+                    <not>
+                        <property>/sim/freeze/replay-state</property>
+                    </not>
+                </enable>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        setprop("fdm/jsbsim/power-curve", 9);
+                        gui.popupTip("325 Watts Sustained", 15);
+                        setprop("fdm/jsbsim/electric-power", 0);
+                        setprop("fdm/jsbsim/elapsed-time", 0);
+                        setprop("sim/model/dash/engine_flag_0", 0);
+                        setprop("sim/model/dash/engine_flag_1", 0);
+                        setprop("sim/model/dash/engine_flag_2", 0);
+                        setprop("sim/model/dash/engine_flag_3", 0);
+                        setprop("sim/model/dash/engine_flag_4", 0);
+                        setprop("sim/model/dash/engine_flag_5", 0);
+                        setprop("sim/model/dash/engine_flag_6", 0);
+                        setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 1);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 0);
+                    </script>
+                </binding>
+            </radio>
 
-                <radio>
+            <radio>
+                <halign>center</halign>
+                <label>450 watts</label>
+                <property>sim/model/dash/engine_flag_10</property>
+                <live>true</live>
+                <enable>
+                    <not>
+                        <property>/sim/freeze/replay-state</property>
+                    </not>
+                </enable>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        setprop("fdm/jsbsim/power-curve", 10);
+                        gui.popupTip("450 Watts Sustained", 15);
+                        setprop("fdm/jsbsim/electric-power", 0);
+                        setprop("fdm/jsbsim/elapsed-time", 0);
+                        setprop("sim/model/dash/engine_flag_0", 0);
+                        setprop("sim/model/dash/engine_flag_1", 0);
+                        setprop("sim/model/dash/engine_flag_2", 0);
+                        setprop("sim/model/dash/engine_flag_3", 0);
+                        setprop("sim/model/dash/engine_flag_4", 0);
+                        setprop("sim/model/dash/engine_flag_5", 0);
+                        setprop("sim/model/dash/engine_flag_6", 0);
+                        setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 1);
+            			setprop("sim/model/dash/engine_flag_11", 0);
+                    </script>
+                </binding>
+            </radio>
+
+            <radio>
+                <halign>center</halign>
+                <label>570 watts</label>
+                <property>sim/model/dash/engine_flag_11</property>
+                <live>true</live>
+                <enable>
+                    <not>
+                        <property>/sim/freeze/replay-state</property>
+                    </not>
+                </enable>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        setprop("fdm/jsbsim/power-curve", 11);
+                        gui.popupTip("570 Watts Sustained", 15);
+                        setprop("fdm/jsbsim/electric-power", 0);
+                        setprop("fdm/jsbsim/elapsed-time", 0);
+                        setprop("sim/model/dash/engine_flag_0", 0);
+                        setprop("sim/model/dash/engine_flag_1", 0);
+                        setprop("sim/model/dash/engine_flag_2", 0);
+                        setprop("sim/model/dash/engine_flag_3", 0);
+                        setprop("sim/model/dash/engine_flag_4", 0);
+                        setprop("sim/model/dash/engine_flag_5", 0);
+                        setprop("sim/model/dash/engine_flag_6", 0);
+                        setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 1);
+                    </script>
+                </binding>
+            </radio>
+        </group>
+
+        <group>
+            <layout>hbox</layout>
+
+            <radio>
+                <halign>left</halign>
+                <label>Healthy 60m</label>
+                <property>sim/model/dash/engine_flag_0</property>
+                <live>true</live>
+                <enable>
+                    <not>
+                        <property>/sim/freeze/replay-state</property>
+                    </not>
+                </enable>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        setprop("fdm/jsbsim/power-curve", 0);
+                        gui.popupTip("750 Peak, 185/60m", 15);
+                        setprop("fdm/jsbsim/electric-power", 0);
+                        setprop("fdm/jsbsim/elapsed-time", 0);
+                        setprop("sim/model/dash/engine_flag_0", 1);
+                        setprop("sim/model/dash/engine_flag_1", 0);
+                        setprop("sim/model/dash/engine_flag_2", 0);
+                        setprop("sim/model/dash/engine_flag_3", 0);
+                        setprop("sim/model/dash/engine_flag_4", 0);
+                        setprop("sim/model/dash/engine_flag_5", 0);
+                        setprop("sim/model/dash/engine_flag_6", 0);
+                        setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 0);
+                    </script>
+                </binding>
+           </radio>
+
+           <radio>
+                <halign>left</halign>
+                <label>Athlete 60m</label>
+                <property>sim/model/dash/engine_flag_1</property>
+                <live>true</live>
+                <enable>
+                    <not>
+                        <property>/sim/freeze/replay-state</property>
+                    </not>
+                </enable>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        setprop("fdm/jsbsim/power-curve", 1);
+                        gui.popupTip("1000 Peak, 360/60m", 15);
+                        setprop("fdm/jsbsim/electric-power", 0);
+                        setprop("fdm/jsbsim/elapsed-time", 0);
+                        setprop("sim/model/dash/engine_flag_0", 0);
+                        setprop("sim/model/dash/engine_flag_1", 1);
+                        setprop("sim/model/dash/engine_flag_2", 0);
+                        setprop("sim/model/dash/engine_flag_3", 0);
+                        setprop("sim/model/dash/engine_flag_4", 0);
+                        setprop("sim/model/dash/engine_flag_5", 0);
+                        setprop("sim/model/dash/engine_flag_6", 0);
+                        setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 0);
+                    </script>
+                </binding>
+            </radio>
+
+            <radio>
                     <halign>left</halign>
                     <label>Healthy 500m</label>
                     <property>sim/model/dash/engine_flag_2</property>
@@ -168,7 +328,7 @@
                         <command>nasal</command>
                         <script>
                             setprop("fdm/jsbsim/power-curve", 2);
-                            gui.popupTip("750 Peak, 75/500m Sustained", 15);
+                            gui.popupTip("750 Peak, 75/500m", 15);
                             setprop("fdm/jsbsim/electric-power", 0);
                             setprop("fdm/jsbsim/elapsed-time", 0);
                             setprop("sim/model/dash/engine_flag_0", 0);
@@ -179,11 +339,15 @@
                             setprop("sim/model/dash/engine_flag_5", 0);
                             setprop("sim/model/dash/engine_flag_6", 0);
                             setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 0);
                         </script>
                     </binding>
-                </radio>
+            </radio>
 
-                <radio>
+            <radio>
                     <halign>left</halign>
                     <label>Athlete 1440m</label>
                     <property>sim/model/dash/engine_flag_3</property>
@@ -200,7 +364,7 @@
                         <command>nasal</command>
                         <script>
                             setprop("fdm/jsbsim/power-curve", 3);
-                            gui.popupTip("1000 Peak, 240/1440m Sustained", 15);
+                            gui.popupTip("1000 Peak, 240/1440m", 15);
                             setprop("fdm/jsbsim/electric-power", 0);
                             setprop("fdm/jsbsim/elapsed-time", 0);
                             setprop("sim/model/dash/engine_flag_0", 0);
@@ -211,11 +375,15 @@
                             setprop("sim/model/dash/engine_flag_5", 0);
                             setprop("sim/model/dash/engine_flag_6", 0);
                             setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 0);
                         </script>
                     </binding>
-                </radio>
+            </radio>
 				
-                <radio>
+            <radio>
                     <halign>left</halign>
                     <label>Cyclist 60m</label>
                     <property>sim/model/dash/engine_flag_4</property>
@@ -232,7 +400,7 @@
                         <command>nasal</command>
                         <script>
                             setprop("fdm/jsbsim/power-curve", 4);
-                            gui.popupTip("2378 Peak, 450/60.4m Sustained", 15);
+                            gui.popupTip("2378 Peak, 450/60.4m", 15);
                             setprop("fdm/jsbsim/electric-power", 0);
                             setprop("fdm/jsbsim/elapsed-time", 0);
                             setprop("sim/model/dash/engine_flag_0", 0);
@@ -243,11 +411,15 @@
                             setprop("sim/model/dash/engine_flag_5", 0);
                             setprop("sim/model/dash/engine_flag_6", 0);
                             setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 0);
                         </script>
                     </binding>
-                </radio>
+            </radio>
 
-                <radio>
+            <radio>
                     <halign>left</halign>
                     <label>Cyclist 27500m</label>
                     <property>sim/model/dash/engine_flag_5</property>
@@ -264,7 +436,7 @@
                         <command>nasal</command>
                         <script>
                             setprop("fdm/jsbsim/power-curve", 5);
-                            gui.popupTip("2378 Peak, 120/27500m Sustained", 15);
+                            gui.popupTip("2378 Peak, 120/27500m", 15);
                             setprop("fdm/jsbsim/electric-power", 0);
                             setprop("fdm/jsbsim/elapsed-time", 0);
                             setprop("sim/model/dash/engine_flag_0", 0);
@@ -275,11 +447,15 @@
                             setprop("sim/model/dash/engine_flag_5", 1);
                             setprop("sim/model/dash/engine_flag_6", 0);
                             setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 0);
                         </script>
                     </binding>
-                </radio>
+            </radio>
 
-                <radio>
+            <radio>
                     <halign>left</halign>
                     <label>Cyclist 27500m step</label>
                     <property>sim/model/dash/engine_flag_6</property>
@@ -296,7 +472,7 @@
                         <command>nasal</command>
                         <script>
                             setprop("fdm/jsbsim/power-curve", 6);
-                            gui.popupTip("2378 Peak, 120/27500m Sustained", 15);
+                            gui.popupTip("2378 Peak, 120/27500m", 15);
                             setprop("fdm/jsbsim/electric-power", 0);
                             setprop("fdm/jsbsim/elapsed-time", 0);
                             setprop("sim/model/dash/engine_flag_0", 0);
@@ -307,11 +483,15 @@
                             setprop("sim/model/dash/engine_flag_5", 0);
                             setprop("sim/model/dash/engine_flag_6", 1);
                             setprop("sim/model/dash/engine_flag_7", 0);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 0);
                         </script>
                     </binding>
-                </radio>
+            </radio>
 				
-				<radio>
+            <radio>
                     <halign>left</halign>
                     <label>Electric Motor</label>
                     <property>sim/model/dash/engine_flag_7</property>
@@ -339,9 +519,13 @@
                             setprop("sim/model/dash/engine_flag_5", 0);
                             setprop("sim/model/dash/engine_flag_6", 0);
                             setprop("sim/model/dash/engine_flag_7", 1);
+            			setprop("sim/model/dash/engine_flag_8", 0);
+           			 	setprop("sim/model/dash/engine_flag_9", 0);
+            			setprop("sim/model/dash/engine_flag_10", 0);
+            			setprop("sim/model/dash/engine_flag_11", 0);
 						</script>
                     </binding>
-                </radio>
+            </radio>
         </group>
     </group>
 

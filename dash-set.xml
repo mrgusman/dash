@@ -118,7 +118,9 @@ More info here: http://wiki.flightgear.org/XML#3._Data
             <electric-power type="int">1</electric-power>
             <power-curve type="int">7</power-curve>
             <elapsed-time type="double">0.0</elapsed-time>
-			<curve-text type="string">Choose between 7 human power curves to power the DaSH aircraft. Or choose unlimited Electric Power. The Human Power Curves are taken from existing data compiled by NASA and from actual data points collected over time from various competitions and events. (See DaSH\Systems\dash-power-curves.xml and \DaSH\Images\humanpoweroutput.jpg for more information.)</curve-text>
+			<dash>
+			    <curve-text type="string">Choose between 4 sustained outputs or 7 human power curves to power the DaSH aircraft. Or choose unlimited Electric Power. The Human Power Curves are taken from existing data compiled by NASA and from actual data points collected over time from various competitions and events. (See DaSH\Systems\dash-power-curves.xml and \DaSH\Images\humanpoweroutput.jpg for more information.)</curve-text>
+            </dash>
         </jsbsim>
    </fdm>
 </PropertyList>

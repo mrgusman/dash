@@ -16,13 +16,13 @@ var power_curve = func () {
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/healthy60m")/2378);
 
     if (getprop("fdm/jsbsim/power-curve") == 1)
-         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/athlete60m")/1000);
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/athlete60m")/2378);
 
     if (getprop("fdm/jsbsim/power-curve") == 2)
-         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/healthy500m")/750);
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/healthy500m")/2378);
 
     if (getprop("fdm/jsbsim/power-curve") == 3)
-         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/athlete1440m")/1000);
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/athlete1440m")/2378);
 
 	if (getprop("fdm/jsbsim/power-curve") == 4)
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/cyclist60m")/2378);

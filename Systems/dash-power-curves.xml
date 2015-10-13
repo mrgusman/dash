@@ -141,6 +141,21 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
             </function>
         </fcs_function>
 
+		<fcs_function name="human-output/user-curve">
+            <function>
+                <product>
+                    <property>/fdm/jsbsim/user-power-curve/user-coefficient</property>
+                    <pow>
+                        <product>
+                            <property>/fdm/jsbsim/elapsed-time</property>
+                            <value>.016666666667</value>
+						</product>
+                        <property>/fdm/jsbsim/user-power-curve/user-exponent</property>
+                    </pow>
+                </product>
+            </function>
+        </fcs_function>
+
 		<fcs_function name="human-output/electric-motor">
             <function>
                 <product>

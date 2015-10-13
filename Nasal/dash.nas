@@ -2,7 +2,7 @@ var power_curve = func () {
 
     setprop("fdm/jsbsim/elapsed-time", getprop("fdm/jsbsim/elapsed-time") + .25);
 
-	if (getprop("fdm/jsbsim/power-curve") < 7) {
+	if (getprop("fdm/jsbsim/power-curve") < 7 or getprop("fdm/jsbsim/power-curve") == 12) {
 		if (getprop("fdm/jsbsim/elapsed-time") == 60) {
 		    gui.popupTip("Elapsed Time = 1 minute " ~ getprop("fdm/jsbsim/elapsed-time"), 10);
 		}
@@ -34,6 +34,9 @@ var power_curve = func () {
 
     if (getprop("fdm/jsbsim/power-curve") == 6)
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/cyclist27500mstep")/2378);
+
+    if (getprop("fdm/jsbsim/power-curve") == 12)
+         setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/user-curve")/2378);
 
     if (getprop("fdm/jsbsim/power-curve") == 8)
          setprop("/controls/engines/engine[0]/throttle", 215/2378);

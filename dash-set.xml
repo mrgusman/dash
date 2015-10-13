@@ -26,8 +26,9 @@
     <aero>dash-fdm</aero>
 
     <startup>
-        <splash-texture>Images/dash-3view-noalpha.png</splash-texture>
         <splash-texture>Images/image1.png</splash-texture>
+        <splash-texture>Images/image2.png</splash-texture>
+        <splash-texture>Images/image3.png</splash-texture>
         <!--splash-title>This machine powered by homo sapiens</splash-title-->
     </startup>
 

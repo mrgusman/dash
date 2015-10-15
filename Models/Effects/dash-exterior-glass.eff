@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
-    <name>Aircraft/DaSH/Models/Effects/glass</name>
+    <name>Aircraft/DaSH/Models/Effects/dash-exterior-glass</name>
     <inherits-from>Effects/model-combined-transparent</inherits-from>
     <parameters>
         <rain-enabled type="int">2</rain-enabled>

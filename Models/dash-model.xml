@@ -5,25 +5,30 @@
 
 <PropertyList>
 
-<!-- AC file is courtesy of SunLightEagle model for CRRC sim -->
- <path>Aircraft/DaSH/Models/SLE_21b.ac</path>
- <offsets>
-   <x-m>0</x-m>
-   <y-m>0</y-m>
-   <z-m>0</z-m>
-   <scale>10</scale>
-   <pitch-deg>0.0</pitch-deg>
- </offsets>
+    <!-- AC file is courtesy of SunLightEagle model for CRRC sim -->
+    <path>Aircraft/DaSH/Models/SLE_21b.ac</path>
+    <offsets>
+        <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+        <scale>10</scale>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
 
-  <params>
+    <!-- ALS volume shadow  -->
+    <model>
+        <path>Effects/shadow/shadow.xml</path>
+   </model>
+
+    <params>
         <gear>
             <front-rollspeed-ms>engines/engine[3]/n1</front-rollspeed-ms>
             <back-rollspeed-ms>engines/engine[3]/n2</back-rollspeed-ms>
         </gear>
-  </params>
+    </params>
 
-  <!--  Specularity fix -->
-  <animation>
+    <!--  Specularity fix -->
+    <animation>
         <type>material</type>
         <object-name>FrontWheel</object-name>
         <object-name>FrontWheelStrut</object-name>
@@ -54,7 +59,7 @@
         <object-name>LeftWingMain</object-name>
         <object-name>RightWingMain</object-name>
         <object-name>RudderEdges</object-name>
-		<object-name>RudderBottomEdge</object-name>
+        <object-name>RudderBottomEdge</object-name>
         <object-name>ElevatorEdges</object-name>
         <object-name>LeftWingEdges</object-name>
         <object-name>RightWingEdges</object-name>
@@ -75,48 +80,22 @@
         </ambient>
     </animation>
 
-	<effect>
-    <inherits-from>Aircraft/DaSH/Models/Effects/effectsMetal</inherits-from>
+    <!-- exterior effects -->
+    <!-- inherits model-combined-deferred -->
+    <effect>
+        <inherits-from>Aircraft/DaSH/Models/Effects/dash-exterior-solid</inherits-from>
         <object-name>FuselageCoveringBack</object-name>
-		<object-name>FuselageCoveringTop</object-name>
-		<object-name>FuselageCoveringBottom</object-name>
-		<object-name>FuselageOverlay</object-name>
-		<object-name>RudderBottomEdge</object-name>
-		<object-name>PropHub</object-name>
-		<object-name>Propeller</object-name>
+        <object-name>FuselageCoveringTop</object-name>
+        <object-name>FuselageCoveringBottom</object-name>
+        <object-name>FuselageOverlay</object-name>
+        <object-name>RudderBottomEdge</object-name>
+        <object-name>PropHub</object-name>
+        <object-name>Propeller</object-name>
     </effect>
 
-    <!-- Transparent Surfaces for Rembrandt rendering -->
+    <!-- inherits model-combined-transperant -->
     <effect>
-        <inherits-from>Effects/model-transparent</inherits-from>
-        <object-name>FuselageCovering</object-name>
-        <object-name>LeftWingCovering</object-name>
-        <object-name>RightWingCovering</object-name>
-        <object-name>ElevatorCovering</object-name>
-        <object-name>RudderCovering</object-name>
-        <object-name>WingBaseLeftCovering</object-name>
-        <object-name>WingBaseRightCovering</object-name>
-    </effect>
-
-    <!-- interior effects
-    <effect>
-        <inherits-from>Effects/interior/c172p-interior</inherits-from>
-        <object-name>AirVent_left</object-name>
-    </effect>
-
-    <effect>
-        <inherits-from>Effects/interior/c172p-interior-glass-shadow</inherits-from>
-        <object-name>glas</object-name>
-    </effect>
-
-    <effect>
-        <inherits-from>Effects/interior/c172p-interior-glass-reflection-front</inherits-from>
-        <object-name>glas_interior</object-name>
-    </effect>
-    -->
-
-    <effect>
-        <inherits-from>Aircraft/DaSH/Models/Effects/glass</inherits-from>
+        <inherits-from>Aircraft/DaSH/Models/Effects/dash-exterior-glass</inherits-from>
         <object-name>FuselageCovering</object-name>
         <object-name>LeftWingCovering</object-name>
         <object-name>RightWingCovering</object-name>
@@ -131,7 +110,30 @@
         <object-name>Propeller.Fast</object-name>
     </effect>
 
-  <animation>
+    <!-- interior effects -->
+    <effect>
+        <inherits-from>Effects/dash-interior-solid</inherits-from>
+        <object-name>InteriorCockpit</object-name>
+    </effect>
+
+    <effect>
+        <inherits-from>Effects/glass</inherits-from>
+        <object-name>InteriorGlass</object-name>
+    </effect>
+
+    <!--
+    <effect>
+        <inherits-from>Effects/interior/dash-interior-glass-shadow</inherits-from>
+        <object-name>glas</object-name>
+    </effect>
+
+    <effect>
+        <inherits-from>Effects/interior/dash-interior-glass-reflection-front</inherits-from>
+        <object-name>glas_interior</object-name>
+    </effect>
+    -->
+
+   <animation>
         <type>select</type>
         <object-name>Propeller.Fast</object-name>
         <condition>

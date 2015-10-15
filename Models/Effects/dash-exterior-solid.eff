@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
-  <name>Aircraft/DaSH/Models/Effects/effectsMetal</name>
+  <name>Aircraft/DaSH/Models/Effects/dash-exterior-solid</name>
   <inherits-from>Effects/model-combined-deferred</inherits-from>
   <parameters>
      <normalmap-enabled type="int">0</normalmap-enabled>

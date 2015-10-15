@@ -567,7 +567,9 @@
 
  </aerodynamics>
 
- <external_reactions>
- </external_reactions>
+  <external_reactions>
+  </external_reactions>
+
+  <system file="dash-power-curves"/>
 
 </fdm_config>

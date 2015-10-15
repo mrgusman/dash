@@ -140,8 +140,20 @@
             <greater-than>
                 <!--property alias="/params/engine/rpm"/-->
                 <property>engines/engine/rpm</property>
-                <value>274</value>
+                <value>225</value>
             </greater-than>
+        </condition>
+  </animation>
+
+   <animation>
+        <type>select</type>
+        <object-name>Propeller</object-name>
+        <condition>
+            <less-than>
+                <!--property alias="/params/engine/rpm"/-->
+                <property>engines/engine/rpm</property>
+                <value>250</value>
+            </less-than>
         </condition>
   </animation>
 

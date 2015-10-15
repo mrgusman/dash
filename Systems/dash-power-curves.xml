@@ -91,10 +91,13 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
             <function>
                 <product>
                     <value>625.1504655025</value>
+                    <pow>
                         <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
                             <value>60</value>
 						</quotient>
+                        <value>-.0127238721</value>
+                    </pow>
                 </product>
             </function>
         </fcs_function>
@@ -119,8 +122,11 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                 <product>
                     <value>1064.5689553018</value>
                     <pow>
-                        <property>/fdm/jsbsim/elapsed-time</property>
-                        <value>-.2269334846</value>  
+                        <quotient>
+                            <property>/fdm/jsbsim/elapsed-time</property>
+                            <value>60</value>
+						</quotient>
+                        <value>-.2269334846</value>
                     </pow>
                 </product>
             </function>
@@ -131,10 +137,10 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                 <product>
                     <value>1094.5382726448</value>
                     <pow>
-                        <product>
+                        <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
-                            <value>.016666666667</value>
-						</product>
+                            <value>60</value>
+						</quotient>
                         <value>-.186084247</value>  
                     </pow>
                 </product>
@@ -146,10 +152,10 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                 <product>
                     <property>/fdm/jsbsim/user-power-curve/user-coefficient</property>
                     <pow>
-                        <product>
+                        <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
-                            <value>.016666666667</value>
-						</product>
+                            <value>60</value>
+						</quotient>
                         <property>/fdm/jsbsim/user-power-curve/user-exponent</property>
                     </pow>
                 </product>

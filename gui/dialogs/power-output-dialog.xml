@@ -7,7 +7,7 @@
 	<layout>hbox</layout>
 	<default-padding>2</default-padding>
 	<font>
-		<name>HELVETICA_12</name>
+		<name>HELVETICA_30</name>
 	</font>
 	<color>
 		<red>0</red>
@@ -21,9 +21,9 @@
         <format>%3.0f</format>
 		<live>true</live>
 		<color>
-			<red>0.9</red>
-			<green>0.4</green>
-			<blue>0.2</blue>
+			<red>255</red>
+			<green>255</green>
+			<blue>50</blue>
 			<alpha>1</alpha>
 		</color>
 	</text>

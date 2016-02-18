@@ -59,7 +59,7 @@
         <object-name>LeftWingMain</object-name>
         <object-name>RightWingMain</object-name>
         <object-name>RudderEdges</object-name>
-        <object-name>RudderBottomEdge</object-name>
+        <object-name>RudderBottomEdges</object-name>
         <object-name>ElevatorEdges</object-name>
         <object-name>LeftWingEdges</object-name>
         <object-name>RightWingEdges</object-name>
@@ -247,9 +247,10 @@
   	<type>rotate</type>
   	<object-name>RudderRibs</object-name>
   	<object-name>RudderCovering</object-name>
-        <object-name>RudderMain</object-name>
-        <object-name>RudderRod</object-name>
-        <object-name>RudderEdges</object-name>
+    <object-name>RudderMain</object-name>
+    <object-name>RudderRod</object-name>
+    <object-name>RudderEdges</object-name>
+    <object-name>RudderBottomEdges</object-name>
   	<property>/controls/flight/aileron</property>
   	<min-deg>-20</min-deg>
   	<max-deg>20</max-deg>

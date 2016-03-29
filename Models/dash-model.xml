@@ -444,9 +444,9 @@
         <factor>-.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.20571</x-m>
-            <y-m>-1.36689</y-m>
-            <z-m>0.92016</z-m>
+            <x-m>0.25851</x-m>
+            <y-m>-1.40232</y-m>
+            <z-m>0.91507</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -469,9 +469,9 @@
         <factor>-.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.2601</x-m>
-            <y-m>-3.19199</y-m>
-            <z-m>0.90877</z-m>
+            <x-m>0.25851</x-m>
+            <y-m>-3.17877</y-m>
+            <z-m>0.91507</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -493,9 +493,9 @@
         <factor>-.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.26073</x-m>
-            <y-m>-4.9349</y-m>
-            <z-m>0.90538</z-m>
+            <x-m>0.25851</x-m>
+            <y-m>-4.92194</y-m>
+            <z-m>0.91091</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -516,9 +516,9 @@
         <factor>-.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.26136</x-m>
-            <y-m>-6.65955</y-m>
-            <z-m>0.90203</z-m>
+            <x-m>0.25851</x-m>
+            <y-m>-6.64907</y-m>
+            <z-m>0.89378</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -538,9 +538,9 @@
         <factor>-.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.20361</x-m>
-            <y-m>-8.69906</y-m>
-            <z-m>0.96</z-m>
+            <x-m>0.25156</x-m>
+            <y-m>-8.31129</y-m>
+            <z-m>0.8728</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -559,9 +559,9 @@
         <factor>-.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.23765</x-m>
-            <y-m>-9.95293</y-m>
-            <z-m>1.04471</z-m>
+            <x-m>0.24601</x-m>
+            <y-m>-9.95491</y-m>
+            <z-m>0.85105</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -579,9 +579,9 @@
         <factor>-.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.21889</x-m>
-            <y-m>-11.75806</y-m>
-            <z-m>1.19616</z-m>
+            <x-m>0.23879</x-m>
+            <y-m>-11.77168</y-m>
+            <z-m>0.82301</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -598,9 +598,9 @@
         <factor>-.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.1968</x-m>
-            <y-m>-13.68245</y-m>
-            <z-m>1.40482</z-m>
+            <x-m>0.21896</x-m>
+            <y-m>-13.68287</y-m>
+            <z-m>0.79408</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -616,9 +616,9 @@
         <factor>-.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.1644</x-m>
-            <y-m>-15.79607</y-m>
-            <z-m>1.70049</z-m>
+            <x-m>0.18968</x-m>
+            <y-m>-15.69817</y-m>
+            <z-m>0.76338</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -708,9 +708,9 @@
         <factor>.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.25944</x-m>
-            <y-m>1.41103</y-m>
-            <z-m>0.91223</z-m>
+            <x-m>0.25851</x-m>
+            <y-m>1.40219</y-m>
+            <z-m>0.91507</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -733,9 +733,9 @@
         <factor>.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.2601</x-m>
-            <y-m>3.19197</y-m>
-            <z-m>0.90877</z-m>
+            <x-m>0.25851</x-m>
+            <y-m>3.17864</y-m>
+            <z-m>0.91507</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -757,9 +757,9 @@
         <factor>.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.26073</x-m>
-            <y-m>4.93487</y-m>
-            <z-m>0.90538</z-m>
+            <x-m>0.25851</x-m>
+            <y-m>4.92182</y-m>
+            <z-m>0.91091</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -780,9 +780,9 @@
         <factor>.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.26136</x-m>
-            <y-m>6.65952</y-m>
-            <z-m>0.90203</z-m>
+            <x-m>0.25851</x-m>
+            <y-m>6.64895</y-m>
+            <z-m>0.89378</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -802,9 +802,9 @@
         <factor>.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.20361</x-m>
-            <y-m>8.69904</y-m>
-            <z-m>0.96</z-m>
+            <x-m>0.25156</x-m>
+            <y-m>8.31117</y-m>
+            <z-m>0.8728</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -823,9 +823,9 @@
         <factor>.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.23765</x-m>
-            <y-m>9.95291</y-m>
-            <z-m>1.04471</z-m>
+            <x-m>0.24601</x-m>
+            <y-m>9.95478</y-m>
+            <z-m>0.85105</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -843,9 +843,9 @@
         <factor>.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.21889</x-m>
-            <y-m>11.75804</y-m>
-            <z-m>1.19616</z-m>
+            <x-m>0.23879</x-m>
+            <y-m>11.77156</y-m>
+            <z-m>0.82301</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -862,9 +862,9 @@
         <factor>.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.1968</x-m>
-            <y-m>13.68242</y-m>
-            <z-m>1.40482</z-m>
+            <x-m>0.21896</x-m>
+            <y-m>13.68275</y-m>
+            <z-m>0.79408</z-m>
         </center>
         <axis>
             <x>1.0</x>
@@ -880,9 +880,9 @@
         <factor>-.007</factor>
         <offset-deg>0</offset-deg>   
         <center>
-            <x-m>0.1644</x-m>
-            <y-m>15.79605</y-m>
-            <z-m>1.70049</z-m>
+            <x-m>0.19968</x-m>
+            <y-m>15.69804</y-m>
+            <z-m>0.76338</z-m>
         </center>
         <axis>
             <x>1.0</x>

@@ -53,7 +53,10 @@ More info here: http://wiki.flightgear.org/XML#3._Data
             http://forum.flightgear.org/viewtopic.php?f=4&t=25157&start=75#p232120
         -->
         <property-rule n="101">
-            <path>Aircraft/c172p/Systems/ground-effects.xml</path>
+            <path>Aircraft/DaSH/Systems/ground-effects.xml</path>
+        </property-rule>
+        <property-rule n="102">
+            <path>Aircraft/DaSH/Systems/wingflex.xml</path>
         </property-rule>
 
     </systems>

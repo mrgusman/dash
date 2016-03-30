@@ -363,6 +363,7 @@
   	</axis>
   </animation>
 
+    <!-- Wingflex -->
     <animation>
         <name>LeftWing1</name>
         <object-name>LeftWingCovering1</object-name>
@@ -427,7 +428,9 @@
         <object-name>LeftWingEdge9</object-name>
         <object-name>LeftWingRibs9</object-name>
         <object-name>LeftWingRod9</object-name> 
-    </animation> 
+    </animation>
+
+    <!-- Left Wingflex rotation -->
     <animation>
         <type>rotate</type>
         <object-name>LeftWing1</object-name>
@@ -440,8 +443,7 @@
         <object-name>LeftWing8</object-name>
         <object-name>LeftWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>-.007</factor>
+        <factor>-1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.25851</x-m>
@@ -465,8 +467,7 @@
         <object-name>LeftWing8</object-name>
         <object-name>LeftWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>-.007</factor>
+        <factor>-1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.25851</x-m>
@@ -489,8 +490,7 @@
         <object-name>LeftWing8</object-name>
         <object-name>LeftWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>-.007</factor>
+        <factor>-1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.25851</x-m>
@@ -512,8 +512,7 @@
         <object-name>LeftWing8</object-name>
         <object-name>LeftWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>-.007</factor>
+        <factor>-1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.25851</x-m>
@@ -534,8 +533,7 @@
         <object-name>LeftWing8</object-name>
         <object-name>LeftWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>-.007</factor>
+        <factor>-1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.25156</x-m>
@@ -555,8 +553,7 @@
         <object-name>LeftWing8</object-name>
         <object-name>LeftWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>-.007</factor>
+        <factor>-1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.24601</x-m>
@@ -575,8 +572,7 @@
         <object-name>LeftWing8</object-name>
         <object-name>LeftWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>-.007</factor>
+        <factor>-1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.23879</x-m>
@@ -594,8 +590,7 @@
         <object-name>LeftWing8</object-name>
         <object-name>LeftWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>-.007</factor>
+        <factor>-1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.21896</x-m>
@@ -612,8 +607,7 @@
         <type>rotate</type>
         <object-name>LeftWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>-.007</factor>
+        <factor>-1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.18968</x-m>
@@ -626,7 +620,127 @@
             <z>0.0</z>
         </axis>
     </animation>
-  
+
+    <!-- Left Wingflex Y-shift -->
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing1</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY1</property>
+        <factor>8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing2</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY2</property>
+        <factor>8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+        <animation>
+        <type>translate</type>
+        <object-name>LeftWing3</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY3</property>
+        <factor>8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing4</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY4</property>
+        <factor>8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing5</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY5</property>
+        <factor>8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing6</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY6</property>
+        <factor>8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing7</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY7</property>
+        <factor>8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing8</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY8</property>
+        <factor>8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing9</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY9</property>
+        <factor>8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>LeftCable</object-name>
+        <property>fdm/jsbsim/aero/force/wingflex</property>
+        <factor>-2</factor>
+        <offset-deg>0</offset-deg>   
+        <center>
+            <x-m>-0.1339</x-m>
+            <y-m>-0.0041</y-m>
+            <z-m>-0.7541</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <!-- Right Wingflex -->
     <animation>
         <name>RightWing1</name>
         <object-name>RightWingCovering1</object-name>
@@ -691,7 +805,9 @@
         <object-name>RightWingEdge9</object-name>
         <object-name>RightWingRibs9</object-name>
         <object-name>RightWingRod9</object-name> 
-    </animation> 
+    </animation>
+
+    <!-- Right Wingflex Rotation -->
     <animation>
         <type>rotate</type>
         <object-name>RightWing1</object-name>
@@ -704,8 +820,7 @@
         <object-name>RightWing8</object-name>
         <object-name>RightWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>.007</factor>
+        <factor>1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.25851</x-m>
@@ -729,8 +844,7 @@
         <object-name>RightWing8</object-name>
         <object-name>RightWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>.007</factor>
+        <factor>1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.25851</x-m>
@@ -753,8 +867,7 @@
         <object-name>RightWing8</object-name>
         <object-name>RightWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>.007</factor>
+        <factor>1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.25851</x-m>
@@ -776,8 +889,7 @@
         <object-name>RightWing8</object-name>
         <object-name>RightWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>.007</factor>
+        <factor>1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.25851</x-m>
@@ -798,8 +910,7 @@
         <object-name>RightWing8</object-name>
         <object-name>RightWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>.007</factor>
+        <factor>1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.25156</x-m>
@@ -819,8 +930,7 @@
         <object-name>RightWing8</object-name>
         <object-name>RightWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>.007</factor>
+        <factor>1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.24601</x-m>
@@ -839,8 +949,7 @@
         <object-name>RightWing8</object-name>
         <object-name>RightWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>.007</factor>
+        <factor>1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.23879</x-m>
@@ -858,8 +967,7 @@
         <object-name>RightWing8</object-name>
         <object-name>RightWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>.007</factor>
+        <factor>1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.21896</x-m>
@@ -876,8 +984,7 @@
         <type>rotate</type>
         <object-name>RightWing9</object-name>
         <property>fdm/jsbsim/aero/force/wingflex</property>
-        <!--factor>-0.0000045</factor-->
-        <factor>-.007</factor>
+        <factor>1</factor>
         <offset-deg>0</offset-deg>   
         <center>
             <x-m>0.19968</x-m>
@@ -888,6 +995,235 @@
             <x>1.0</x>
             <y>0.0</y>
             <z>0.0</z>
+        </axis>
+    </animation>
+
+    <!-- Right Wingflex Y-shift -->
+    <animation>
+        <type>translate</type>
+        <object-name>RightWing1</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY1</property>
+        <factor>-8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>RightWing2</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY2</property>
+        <factor>-8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+        <animation>
+        <type>translate</type>
+        <object-name>RightWing3</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY3</property>
+        <factor>-8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>RightWing4</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY4</property>
+        <factor>-8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>RightWing5</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY5</property>
+        <factor>-8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>RightWing6</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY6</property>
+        <factor>-8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>RightWing7</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY7</property>
+        <factor>-8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>RightWing8</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY8</property>
+        <factor>-8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>RightWing9</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexY9</property>
+        <factor>-8</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>RightCable</object-name>
+        <property>fdm/jsbsim/aero/force/wingflex</property>
+        <factor>2</factor>
+        <offset-deg>0</offset-deg>   
+        <center>
+            <x-m>-0.1339</x-m>
+            <y-m>-0.0000331</y-m>
+            <z-m>-0.751</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <!-- Wingflex X-shift -->
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing1</object-name>
+        <object-name>RightWing1</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexX1</property>
+        <factor>1</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing2</object-name>
+        <object-name>RightWing2</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexX2</property>
+        <factor>1</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+        <animation>
+        <type>translate</type>
+        <object-name>LeftWing3</object-name>
+        <object-name>RightWing3</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexX3</property>
+        <factor>1</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing4</object-name>
+        <object-name>RightWing4</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexX4</property>
+        <factor>1</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing5</object-name>
+        <object-name>RightWing5</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexX5</property>
+        <factor>1</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing6</object-name>
+        <object-name>RightWing6</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexX6</property>
+        <factor>1</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing7</object-name>
+        <object-name>RightWing7</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexX7</property>
+        <factor>1</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing8</object-name>
+        <object-name>RightWing8</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexX8</property>
+        <factor>1</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>LeftWing9</object-name>
+        <object-name>RightWing9</object-name>
+        <property>fdm/jsbsim/aero/force/wingflexX9</property>
+        <factor>1</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
         </axis>
     </animation>
 

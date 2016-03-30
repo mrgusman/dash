@@ -571,5 +571,6 @@
   </external_reactions>
 
   <system file="dash-power-curves"/>
+  <system file="dash-wingflex"/>
 
 </fdm_config>

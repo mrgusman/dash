@@ -5,7 +5,13 @@
 
 <PropertyList>
   <sim include="dash-views.xml">
-
+    <tags>
+        <tag>human-power</tag>
+        <tag>single-motor</tag>
+        <tag>electric</tag>
+        <tag>experimental</tag>
+        <tag>fixed-gear</tag>
+    </tags>
     <description>DaSH v5 human-powered airplane</description>
     
     <aircraft-version>20140905</aircraft-version>

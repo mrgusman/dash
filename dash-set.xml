@@ -5,7 +5,15 @@
 
 <PropertyList>
   <sim include="dash-views.xml">
-
+    <tags>
+        <tag>human-power</tag>
+        <tag>single-motor</tag>
+        <tag>electric</tag>
+        <tag>experimental</tag>
+        <tag>fixed-gear</tag>
+        <tag>fixed-pitch</tag>
+        <tag>propeller</tag>
+    </tags>
     <description>DaSH v5 human-powered airplane</description>
     
     <aircraft-version>20140905</aircraft-version>
@@ -13,13 +21,13 @@
     <status>development</status>
 
     <rating>
-        <FDM type="int">3</FDM>
-        <systems type="int">1</systems>
-        <model type="int">3</model>
-        <cockpit type="int">0</cockpit>
+        <FDM type="int">4</FDM>
+        <systems type="int">3</systems>
+        <model type="int">4</model>
+        <cockpit type="int">1</cockpit>
     </rating>
     
-    <author>Marshall Gusman</author>
+    <author>Marshall Gusman (FDM), Wayne Bragg (3D, power curves, effects)</author>
     
     <flight-model>jsb</flight-model>
     

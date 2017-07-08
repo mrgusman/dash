@@ -2,7 +2,9 @@
 
 <!--
 
-  DaSH wingflex translate.
+    DaSH wingflex translate.
+
+    Copyright (c) 2015 Wayne Bragg
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -23,7 +25,7 @@
     <channel name="wingflex">
 
         <!-- Wingflex X-shift -->
-        <fcs_function name="aero/force/wingflexX1">
+        <fcs_function name="aero/force/wingflexZ1">
             <function>
                 <product>
                     <value>.5</value>
@@ -37,7 +39,7 @@
             </function>
         </fcs_function>
 
-        <fcs_function name="aero/force/wingflexX2">
+        <fcs_function name="aero/force/wingflexZ2">
             <function>
                 <sum>
                     <product>
@@ -62,7 +64,7 @@
             </function>
         </fcs_function>
 
-        <fcs_function name="aero/force/wingflexX3">
+        <fcs_function name="aero/force/wingflexZ3">
             <function>
                 <sum>
                     <product>
@@ -96,7 +98,7 @@
             </function>
         </fcs_function>
 
-        <fcs_function name="aero/force/wingflexX4">
+        <fcs_function name="aero/force/wingflexZ4">
             <function>
                 <sum>
                     <product>
@@ -139,7 +141,7 @@
             </function>
         </fcs_function>
 
-        <fcs_function name="aero/force/wingflexX5">
+        <fcs_function name="aero/force/wingflexZ5">
             <function>
                 <sum>
                     <product>
@@ -191,7 +193,7 @@
             </function>
         </fcs_function>
 
-        <fcs_function name="aero/force/wingflexX6">
+        <fcs_function name="aero/force/wingflexZ6">
             <function>
                 <sum>
                     <product>
@@ -252,7 +254,7 @@
             </function>
         </fcs_function>
 
-        <fcs_function name="aero/force/wingflexX7">
+        <fcs_function name="aero/force/wingflexZ7">
             <function>
                 <sum>
                     <product>
@@ -322,7 +324,7 @@
             </function>
         </fcs_function>
 
-        <fcs_function name="aero/force/wingflexX8">
+        <fcs_function name="aero/force/wingflexZ8">
             <function>
                 <sum>
                     <product>
@@ -401,7 +403,7 @@
             </function>
         </fcs_function>
 
-        <fcs_function name="aero/force/wingflexX9">
+        <fcs_function name="aero/force/wingflexZ9">
             <function>
                 <sum>
                     <product>

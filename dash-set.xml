@@ -97,6 +97,10 @@ More info here: http://wiki.flightgear.org/XML#3._Data
         <shadow-volume type="bool">true</shadow-volume>
     </rendering>
 
+    <gui>
+        <show-power-output type="bool">true</show-power-output>
+    </gui>
+
  </sim>
 
     <input>

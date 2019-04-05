@@ -78,7 +78,9 @@ var power_curve = func () {
 
 }
 
-############################################## rain
+##############################################
+#rain
+##############################################
 var weather_effects_loop = func {
     var airspeed = getprop("/velocities/airspeed-kt");
 
@@ -112,6 +114,20 @@ var global_system_loop = func{
 var nasalInit = setlistener("/sim/signals/fdm-initialized", func{
     #aircraft.data.add("fdm/jsbsim/pedal-power");
     #aircraft.data.load();
+
+    if (getprop("/sim/gui/show-power-output")) {
+        fgcommand("dialog-show", props.Node.new({"dialog-name": "power-output-dialog"}));
+    } else {
+        fgcommand("dialog-close", props.Node.new({"dialog-name": "power-output-dialog"}));
+    }
+    setlistener("/sim/gui/show-power-output", func (node) {      
+        if (node.getBoolValue()) {
+            fgcommand("dialog-show", props.Node.new({"dialog-name": "power-output-dialog"}));
+        } else {
+            fgcommand("dialog-close", props.Node.new({"dialog-name": "power-output-dialog"}));
+        }
+    }, 0, 0);
+
     var dash_timer = maketimer(0.25, func{global_system_loop()});
     dash_timer.start();
 });

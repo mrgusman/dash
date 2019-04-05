@@ -28,7 +28,7 @@
 
     <key n="57">
         <name>3</name>
-        <desc>Warningg</desc>
+        <desc>Warning</desc>
         <binding>
             <command>nasal</command>
             <script>gui.popupTip("Throttle unavalable during Power Curve."), 10);</script>

@@ -23,15 +23,16 @@
                     <script>aircraft.livery.dialog.toggle()</script>
                 </binding>
             </item-->
-			<item>
-                <label>Show Power Output</label>
+
+            <item>
+                <label>Power Output On/Off</label>
                 <binding>
-                    <command>dialog-show</command>
-                    <dialog-name>power-output-dialog</dialog-name>
+                    <command>property-toggle</command>
+                    <property>/sim/gui/show-power-output</property>
                 </binding>
             </item>
 
-			<item>
+            <item>
                 <label>Human Power Curves</label>
                 <binding>
                     <command>dialog-show</command>

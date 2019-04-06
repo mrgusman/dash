@@ -34,7 +34,7 @@
                   .set("max-width", 230)
                   .setColor(1,1,1);
 
-              var power_output_loop = func {
+              var power_output_loop = func { 
                   text.setText(sprintf("%4.0f", getprop("fdm/jsbsim/human-output/electric-motor")));
               }
 

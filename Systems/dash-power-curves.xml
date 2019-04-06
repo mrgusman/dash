@@ -22,7 +22,7 @@
     f(x)=a*x^n where -1<n<0 and a>0(the specific values may be able to be pinpointed further for a).
     The preset functions are based off prerecorded data from various forms of flight crew (see table below).
     To calculate any coefficient a and power n plug any recorded data into a function charting software and
-    find the PARABOLIC best fit making sure the times used are in SECONDS.
+    find the POWER best fit making sure the times used are in SECONDS.
 
     Forewarning: It's been years since this information has been looked at and some of the directions here
     may not be entirely accurate.
@@ -51,7 +51,7 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
 <system name="dash power curves">
     <channel name="powercurves">
 
-        <!-- PARABOLIC best fit power curves based on table above -->
+        <!-- best fit power curve coef and pow based on table above -->
 
         <fcs_function name="human-output/healthy60m">
             <function>

@@ -7,3 +7,11 @@ License: GPL-2+
 Files: SLE_21b.ac
 Copyright: 2014 Aurora Flight Sciences
 License: GPL-2+
+
+Files: * excluding FDM
+Wayne Bragg
+License: GPL-2+
+
+Power curve concept and functions
+Aaron Bragg
+License: GPL-2+

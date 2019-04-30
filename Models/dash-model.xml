@@ -234,9 +234,8 @@
         <object-name>Propeller.Fast</object-name>
         <condition>
             <greater-than>
-                <!--property alias="/params/engine/rpm"/-->
-                <property>engines/engine/rpm</property>
-                <value>225</value>
+                <property>fdm/jsbsim/human-output/electric-motor</property>
+                <value>380</value>
             </greater-than>
         </condition>
   </animation>
@@ -246,9 +245,8 @@
         <object-name>Propeller</object-name>
         <condition>
             <less-than>
-                <!--property alias="/params/engine/rpm"/-->
-                <property>engines/engine/rpm</property>
-                <value>250</value>
+                <property>fdm/jsbsim/human-output/electric-motor</property>
+                <value>1025</value>
             </less-than>
         </condition>
   </animation>
@@ -256,9 +254,8 @@
   <animation>
       <type>blend</type>
       <object-name>Propeller.Fast</object-name>
-      <!--property alias="/params/engine/rpm"/-->
-      <property>engines/engine/rpm</property>
-      <factor>0.0004</factor>
+      <property>fdm/jsbsim/human-output/electric-motor</property>
+      <factor>0.0002</factor>
       <max>1.0</max>
       <min>0.0</min>
   </animation>
@@ -267,8 +264,7 @@
    <object-name>Propeller</object-name>
    <object-name>PropHub</object-name>
    <type>spin</type>
-   <!--property alias="/params/engine/rpm"/-->
-   <property>engines/engine/rpm</property>
+   <property>fdm/jsbsim/human-output/electric-motor</property>
    <factor>-1</factor>
    <center>
     <x-m>-1.81</x-m>

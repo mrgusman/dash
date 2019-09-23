@@ -35,50 +35,42 @@ var power_curve = func () {
     if (getprop("fdm/jsbsim/power-curve") == 0) {
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/healthy60m")/2378);
          checkTime(getprop("fdm/jsbsim/human-output/healthy60m"));
-    }
-    if (getprop("fdm/jsbsim/power-curve") == 1) {
+    } else if (getprop("fdm/jsbsim/power-curve") == 1) {
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/athlete60m")/2378);
          checkTime(getprop("fdm/jsbsim/human-output/athlete60m"));
-    }
-    if (getprop("fdm/jsbsim/power-curve") == 2) {
+    } else if (getprop("fdm/jsbsim/power-curve") == 2) {
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/healthy500m")/2378);
          checkTime(getprop("fdm/jsbsim/human-output/healthy500m"));
-    }
-    if (getprop("fdm/jsbsim/power-curve") == 3) {
+    } else if (getprop("fdm/jsbsim/power-curve") == 3) {
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/athlete1440m")/2378);
          checkTime(getprop("fdm/jsbsim/human-output/athlete1440m"));
-    }
-	if (getprop("fdm/jsbsim/power-curve") == 4) {
+    } else if (getprop("fdm/jsbsim/power-curve") == 4) {
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/cyclist60m")/2378);
          checkTime(getprop("fdm/jsbsim/human-output/cyclist60m"));
-    }
-    if (getprop("fdm/jsbsim/power-curve") == 5) {
+    } else if (getprop("fdm/jsbsim/power-curve") == 5) {
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/cyclist27500m")/2378);
          checkTime(getprop("fdm/jsbsim/human-output/cyclist27500m"));
-    }
-    if (getprop("fdm/jsbsim/power-curve") == 6) {
+    } else if (getprop("fdm/jsbsim/power-curve") == 6) {
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/cyclist27500mstep")/2378);
          checkTime(getprop("fdm/jsbsim/human-output/cyclist27500mstep"));
-    }
-    if (getprop("fdm/jsbsim/power-curve") == 12) {
+    } else if (getprop("fdm/jsbsim/power-curve") == 8) {
+         setprop("/controls/engines/engine[0]/throttle", 215/2378);
+    } else if (getprop("fdm/jsbsim/power-curve") == 9) {
+         setprop("/controls/engines/engine[0]/throttle", 325/2378);
+    } else if (getprop("fdm/jsbsim/power-curve") == 10) {
+         setprop("/controls/engines/engine[0]/throttle", 450/2378);
+    } else if (getprop("fdm/jsbsim/power-curve") == 11) {
+         setprop("/controls/engines/engine[0]/throttle", 570/2378);
+    } else if (getprop("fdm/jsbsim/power-curve") == 12) {
          setprop("/controls/engines/engine[0]/throttle", getprop("fdm/jsbsim/human-output/user-curve")/2378);
          checkTime(getprop("fdm/jsbsim/human-output/user-curve"));
     }
-    if (getprop("fdm/jsbsim/power-curve") == 8)
-         setprop("/controls/engines/engine[0]/throttle", 215/2378);
-
-    if (getprop("fdm/jsbsim/power-curve") == 9)
-         setprop("/controls/engines/engine[0]/throttle", 325/2378);
-
-    if (getprop("fdm/jsbsim/power-curve") == 10)
-         setprop("/controls/engines/engine[0]/throttle", 450/2378);
-
-    if (getprop("fdm/jsbsim/power-curve") == 11)
-         setprop("/controls/engines/engine[0]/throttle", 570/2378);
 
 }
 
-############################################## rain
+##############################################
+#rain
+##############################################
 var weather_effects_loop = func {
     var airspeed = getprop("/velocities/airspeed-kt");
 
@@ -112,6 +104,20 @@ var global_system_loop = func{
 var nasalInit = setlistener("/sim/signals/fdm-initialized", func{
     #aircraft.data.add("fdm/jsbsim/pedal-power");
     #aircraft.data.load();
+
+    if (getprop("/sim/gui/show-power-output")) {
+        fgcommand("dialog-show", props.Node.new({"dialog-name": "power-output-dialog"}));
+    } else {
+        fgcommand("dialog-close", props.Node.new({"dialog-name": "power-output-dialog"}));
+    }
+    setlistener("/sim/gui/show-power-output", func (node) {      
+        if (node.getBoolValue()) {
+            fgcommand("dialog-show", props.Node.new({"dialog-name": "power-output-dialog"}));
+        } else {
+            fgcommand("dialog-close", props.Node.new({"dialog-name": "power-output-dialog"}));
+        }
+    }, 0, 0);
+
     var dash_timer = maketimer(0.25, func{global_system_loop()});
     dash_timer.start();
 });

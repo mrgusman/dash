@@ -18,29 +18,40 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+    All humans will function roughly the same way. For this their output over time can be given by the function
+    f(x)=a*x^n where -1<n<0 and a>0(the specific values may be able to be pinpointed further for a).
+    The preset functions are based off prerecorded data from various forms of flight crew (see table below).
+    To calculate any coefficient a and power n plug any recorded data into a function charting software and
+    find the POWER best fit making sure the times used are in SECONDS.
+
+    Forewarning: It's been years since this information has been looked at and some of the directions here
+    may not be entirely accurate.
+
 
 Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cyclist70m	Time-m	Cyclist27500m	Time-m	Cyclist27500mstep
-0.1		750			1000		0.1		750	    	0.1		1000			0.1		2378		0.1		2378			0.1		2378
-0.5		550			750			0.5		550	    	0.5		750				0.5		1310		0.5		1310			0.5		1310
-1		425			610			1		425	    	1		610				1.25	1025		1.25	1025			1.25	1025
-2		360			520			2		360	    	2		520				1.5		870			1.5		870				1.5		870
-5		320			450			5		320	   	 	5		450				5		570			5		570				5		570
-10		310			400			10		310			10		400				20		450			20		450				20		450
-20		280			390			20		280			20		390				60.4	450			60.4	450				60.4	450
-50		215			375			50		215			50		375									27500	120				100		450
-60		185			360			60		185			60		360															200		440
-								100		170			100		350															500		400
-								200		125			200		325															1000	390
-								500		75			500		385															1440	360
-								1000	250																				2000	350
-								1440	240																				5000	225
-																														10000	200
-																														20000	160
-																														27500	120
+0.1		          750			1000		0.1		        750	    	0.1		  1000			0.1		    2378		  0.1		      2378			0.1		      2378
+0.5		          550			750			0.5		        550	    	0.5		  750				0.5		    1310		  0.5		      1310			0.5		      1310
+1		            425			610			1		          425	    	1		    610				1.25	    1025		  1.25	      1025			1.25	      1025
+2		            360			520			2		          360	    	2		    520				1.5		    870			  1.5		      870				1.5		      870
+5		            320			450			5		          320	   	 	5		    450				5		      570			  5		        570				5		        570
+10		          310			400			10		        310			  10		  400				20		    450			  20		      450				20		      450
+20		          280			390			20		        280			  20		  390				60.4	    450			  60.4	      450				60.4	      450
+50		          215			375			50		        215			  50		  375									          27500	      120				100		      450
+60		          185			360			60		        185			  60		  360															                    200		      440
+								                100		        170			  100		  350															                    500		      400
+								                200		        125			  200		  325													                  		  1000	      390
+								                500		        75			  500		  385															                    1440	      360
+								                                        1000	  250																			            2000	      350
+								                                        1440	  240																			            5000	      225
+																														                                                        10000	      200
+																													                                   	                      20000	      160
+																														                                                        27500	      120
 -->
 
 <system name="dash power curves">
     <channel name="powercurves">
+
+        <!-- best fit power curve coef and pow based on table above -->
 
         <fcs_function name="human-output/healthy60m">
             <function>
@@ -50,7 +61,7 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                         <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
                             <value>60</value>
-						</quotient>
+						            </quotient>
                         <value>-.1994919163</value>  
                     </pow>
                 </product>
@@ -65,7 +76,7 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                         <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
                             <value>60</value>
-						</quotient>
+						            </quotient>
                         <value>-.1585397352</value> 
                     </pow>
                 </product>
@@ -80,14 +91,14 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                         <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
                             <value>60</value>
-						</quotient>
+						            </quotient>
                         <value>-.2400079661</value>  
                     </pow>
                 </product>
             </function>
         </fcs_function>
 		
-		<fcs_function name="human-output/athlete1440m">
+		    <fcs_function name="human-output/athlete1440m">
             <function>
                 <product>
                     <value>625.1504655025</value>
@@ -95,7 +106,7 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                         <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
                             <value>60</value>
-						</quotient>
+						            </quotient>
                         <value>-.0127238721</value>
                     </pow>
                 </product>
@@ -110,7 +121,7 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                         <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
                             <value>60</value>
-						</quotient>
+						            </quotient>
                         <value>-.2714570552</value>  
                     </pow>
                 </product>
@@ -125,14 +136,14 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                         <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
                             <value>60</value>
-						</quotient>
+						            </quotient>
                         <value>-.2269334846</value>
                     </pow>
                 </product>
             </function>
         </fcs_function>
 		
-		<fcs_function name="human-output/cyclist27500mstep">
+		    <fcs_function name="human-output/cyclist27500mstep">
             <function>
                 <product>
                     <value>1094.5382726448</value>
@@ -140,14 +151,16 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                         <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
                             <value>60</value>
-						</quotient>
+						            </quotient>
                         <value>-.186084247</value>  
                     </pow>
                 </product>
             </function>
         </fcs_function>
 
-		<fcs_function name="human-output/user-curve">
+        <!-- User defined PARABOLIC best fit power curve -->
+
+		    <fcs_function name="human-output/user-curve">
             <function>
                 <product>
                     <property>/fdm/jsbsim/user-power-curve/user-coefficient</property>
@@ -155,14 +168,16 @@ Time-m	Healthy60m 	Athlete60m 	Time-m	Healthy500m Time-m 	Athlete1440m	Time-m	Cy
                         <quotient>
                             <property>/fdm/jsbsim/elapsed-time</property>
                             <value>60</value>
-						</quotient>
+						            </quotient>
                         <property>/fdm/jsbsim/user-power-curve/user-exponent</property>
                     </pow>
                 </product>
             </function>
         </fcs_function>
 
-		<fcs_function name="human-output/electric-motor">
+        <!-- throttle controlled power output -->
+
+		    <fcs_function name="human-output/electric-motor">
             <function>
                 <product>
                     <value>2378</value>

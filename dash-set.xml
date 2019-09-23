@@ -17,7 +17,7 @@
     <description>DaSH v5 human-powered airplane</description>
     
     <aircraft-version>20140905</aircraft-version>
-    
+    <minimum-fg-version>2018.2.0</minimum-fg-version>
     <status>development</status>
 
     <rating>
@@ -33,11 +33,36 @@
     
     <aero>dash-fdm</aero>
 
+    <!-- Splash screens. One is randomly chosen when FlightGear starts -->
+    <previews>
+        <preview>
+            <type>exterior</type>
+            <path>Previews/image1.jpg</path>
+            <splash type="bool">true</splash>
+        </preview>
+        <preview>
+            <type>exterior</type>
+            <path>Previews/image2.jpg</path>
+            <splash type="bool">true</splash>
+        </preview>
+        <preview>
+            <type>exterior</type>
+            <path>Previews/image3.jpg</path>
+            <splash type="bool">true</splash>
+        </preview>
+        <preview>
+            <type>exterior</type>
+            <path>Previews/image4.jpg</path>
+            <splash type="bool">true</splash>
+        </preview>
+        <preview>
+            <type>exterior</type>
+            <path>Previews/image5.jpg</path>
+            <splash type="bool">true</splash>
+        </preview>
+    </previews>
     <startup>
-        <splash-texture>Images/image1.png</splash-texture>
-        <splash-texture>Images/image2.png</splash-texture>
-        <splash-texture>Images/image3.png</splash-texture>
-        <!--splash-title>This machine powered by homo sapiens</splash-title-->
+        <splash-texture>Aircraft/DaSH/Previews/image1.jpg</splash-texture>
     </startup>
 
     <model>
@@ -74,6 +99,7 @@ More info here: http://wiki.flightgear.org/XML#3._Data
         <!--path>fdm/jsbsim/power-curve</path>
         <path>fdm/jsbsim/pedal-power</path-->
         <path>/sim/rendering/shadow-volume</path>
+        <path>/sim/gui/show-power-output</path>
         <!--path>/sim/model/occupants</path-->
     </aircraft-data>
 
@@ -96,6 +122,10 @@ More info here: http://wiki.flightgear.org/XML#3._Data
     <rendering>
         <shadow-volume type="bool">true</shadow-volume>
     </rendering>
+
+    <gui>
+        <show-power-output type="bool">true</show-power-output>
+    </gui>
 
  </sim>
 

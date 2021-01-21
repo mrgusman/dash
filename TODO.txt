@@ -1,0 +1,9 @@
+Wing flex
+Peddle system
+"Local" GUI item to disable pop-up of time and power output
+New liveries
+Walker helper models at wing tips?
+Bump map
+Interior cockpit work
+Missions
+Verify support strut counts

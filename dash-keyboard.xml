@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<PropertyList>
+
+ <key n="51">
+  <name>3</name>
+  <desc>Decrease throttle or autopilot autothrottle</desc>
+  <repeatable type="bool">true</repeatable>
+  <binding>
+    <condition>
+      <equals>
+        <property>/fdm/jsbsim/power-curve</property>
+        <value>7</value>
+      </equals>
+    </condition>
+    <command>nasal</command>
+    <script>
+       controls.incThrottle(-0.01, -1.0)
+    </script>
+  </binding>
+ </key>
+ <key n="57">
+  <name>9</name>
+  <desc>Increase throttle or autopilot autothrottle</desc>
+  <repeatable type="bool">true</repeatable>
+  <binding>
+    <condition>
+      <equals>
+        <property>/fdm/jsbsim/power-curve</property>
+        <value>7</value>
+      </equals>
+    </condition>
+  <command>nasal</command>
+   <script>
+     controls.incThrottle(0.01, 1.0)
+   </script>
+  </binding>
+ </key>
+<key n="360">
+  <name>PageUp</name>
+  <desc>Increase throttle or autopilot autothrottle</desc>
+  <repeatable type="bool">true</repeatable>
+  <binding>
+    <condition>
+      <equals>
+        <property>/fdm/jsbsim/power-curve</property>
+        <value>7</value>
+      </equals>
+    </condition>
+   <command>nasal</command>
+   <script>
+     controls.incThrottle(0.01, 1.0)
+   </script>
+  </binding>
+ </key>
+ <key n="361">
+  <name>PageDown</name>
+  <desc>Decrease throttle or autopilot autothrottle</desc>
+  <repeatable type="bool">true</repeatable>
+  <binding>
+    <condition>
+      <equals>
+        <property>/fdm/jsbsim/power-curve</property>
+        <value>7</value>
+      </equals>
+    </condition>
+   <command>nasal</command>
+   <script>
+     controls.incThrottle(-0.01, -1.0)
+   </script>
+  </binding>
+ </key>
+
+</PropertyList>

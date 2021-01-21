@@ -4,5 +4,6 @@
 <!-- Copyright 2014 Marshall Gusman -->
 
 <electric_engine name="legs">
- <power unit="WATTS"> 1000 </power>
+     <!--power unit="WATTS"> 1000 </power-->
+	 <power unit="WATTS"> 2378 </power>
 </electric_engine>

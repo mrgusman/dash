@@ -92,11 +92,27 @@
 
  <ground_reactions>
 
+  <contact type="BOGEY" name="NOSE">
+    <location unit="M">
+     <x> -0.72 </x>
+     <y>  0.00 </y>
+     <z>  0.05 </z>
+   </location>
+   <static_friction>  0.800 </static_friction>
+   <dynamic_friction> 0.500 </dynamic_friction>
+   <rolling_friction> 0.020 </rolling_friction>
+   <spring_coeff  unit="N/M">      5000.00 </spring_coeff>
+   <damping_coeff unit="N/M/SEC">   500.00 </damping_coeff>
+   <max_steer unit="DEG">0</max_steer>
+   <brake_group>NONE</brake_group>
+   <retractable>0</retractable>
+  </contact>
+  
   <contact type="BOGEY" name="MAIN">
     <location unit="M">
-      <x>   1.157</x>
-      <y>   0.00 </y>
-      <z>   0.00 </z>
+      <x>  1.05 </x>
+      <y>  0.00 </y>
+      <z> -0.08 </z>
     </location>
     <static_friction>  0.800 </static_friction>
     <dynamic_friction> 0.500 </dynamic_friction>
@@ -108,27 +124,11 @@
     <retractable>0</retractable>
   </contact>
 
-  <contact type="BOGEY" name="NOSE">
-    <location unit="M">
-     <x>   0.046</x>
-     <y>   0.00 </y>
-     <z>   0.00 </z>
-   </location>
-   <static_friction>  0.800 </static_friction>
-   <dynamic_friction> 0.500 </dynamic_friction>
-   <rolling_friction> 0.020 </rolling_friction>
-   <spring_coeff  unit="N/M">      5000.00 </spring_coeff>
-   <damping_coeff unit="N/M/SEC">   500.00 </damping_coeff>
-   <max_steer unit="DEG">0</max_steer>
-   <brake_group>NONE</brake_group>
-   <retractable>0</retractable>
-  </contact>
-
   <contact type="STRUCTURE" name="LEFT_WING">
     <location unit="M">
      <x>   0.50 </x>
      <y> -16.65 </y>
-     <z>   3.83 </z>
+     <z>   0.80 </z>
    </location>
    <static_friction>  0.20 </static_friction>
    <dynamic_friction> 0.20 </dynamic_friction>
@@ -140,7 +140,7 @@
     <location unit="M">
      <x>   0.50 </x>
      <y>  16.65 </y>
-     <z>   3.83 </z>
+     <z>   0.80 </z>
    </location>
    <static_friction>  0.20 </static_friction>
    <dynamic_friction> 0.20 </dynamic_friction>
@@ -567,7 +567,10 @@
 
  </aerodynamics>
 
- <external_reactions>
- </external_reactions>
+  <external_reactions>
+  </external_reactions>
+
+  <system file="dash-power-curves"/>
+  <system file="dash-wingflex"/>
 
 </fdm_config>
